@@ -67,11 +67,32 @@ export default function HeroSection({ data, onOpenModal }: HeroSectionProps) {
           </span>
         </motion.p>
 
+        {/* VSL Video Frame */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.45, duration: 0.8 }}
+          className="mt-8 sm:mt-12 relative w-full max-w-3xl sm:max-w-4xl mx-auto"
+        >
+          {/* Subtle Ambient Glow Behind Video Frame */}
+          <div className="absolute -inset-1.5 bg-gradient-to-r from-[#1F5F5B]/30 via-[#E8704A]/25 to-[#1F5F5B]/30 rounded-3xl blur-xl opacity-75 pointer-events-none" />
+
+          <div className="relative aspect-video w-full rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden border-4 border-white/90 bg-[#123835]">
+            <iframe
+              src={data.vslVideo?.url || "https://fast.wistia.net/embed/iframe/sppu5h7owc?seo=false&videoFoam=true"}
+              title={data.vslVideo?.title || "How The 6-Axis Psycho-Somatic Reset Method Works"}
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+        </motion.div>
+
         {/* CTA Container */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.45, duration: 0.7 }}
+          transition={{ delay: 0.6, duration: 0.7 }}
           className="mt-8 sm:mt-10 flex flex-col items-center justify-center gap-3"
         >
           <button

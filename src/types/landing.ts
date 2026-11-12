@@ -5,6 +5,11 @@ export interface BrandInfo {
   tagline: string;
 }
 
+export interface HeroVideo {
+  url: string;
+  title?: string;
+}
+
 export interface HeroData {
   badge: string;
   headline: {
@@ -16,6 +21,7 @@ export interface HeroData {
     highlight3: string;
   };
   subheadline: string;
+  vslVideo?: HeroVideo;
   ctaText: string;
   urgencyNote: string;
   trustBadges: string[];
@@ -132,4 +138,3 @@ export interface LandingPageContent {
   popupModal: PopupModalData;
   thankYou: ThankYouData;
 }
-
