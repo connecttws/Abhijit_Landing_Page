@@ -1,0 +1,261 @@
+{
+  "brand": {
+    "name": "Wellness With Abhijit",
+    "coach": "Abhijit Ghosh",
+    "title": "Psycho-Somatic Wellness & Anxiety Reset Coach",
+    "tagline": "Fix your anxiety from the root, not just the symptoms"
+  },
+  "hero": {
+    "badge": "It is not a Therapy Session",
+    "headline": {
+      "prefix": "Fix your",
+      "highlight1": "Anxiety & Mental Health Score",
+      "middle": "without therapy and pills within next 3 weeks by using our",
+      "highlight2": "6-axis psycho-somatic method",
+      "suffix": "or otherwise we do it",
+      "highlight3": "for free"
+    },
+    "subheadline": "Fix your anxiety from the root, not just the symptoms. We find what’s really driving it, then repair your gut-mind chemistry, sleep, posture, and stress-related body pain.",
+    "ctaText": "Book my free Anxiety-Breakdown Consultation",
+    "urgencyNote": "If slots are full , kindly try later",
+    "trustBadges": [
+      "100% Free Consultation",
+      "No Pills or Heavy Supplements",
+      "Science-Backed 6-Axis Method",
+      "Private 1-on-1 Personalized Session"
+    ]
+  },
+  "proofSection": {
+    "title": "Trusted by those who have Tried Everything",
+    "subtitle": "Real clients, corporate leaders, and busy professionals who reclaimed their calm and vitality.",
+    "stats": [
+      { "value": "1,200+", "label": "Lives Reclaimed" },
+      { "value": "3 Weeks", "label": "Average Initial Relief" },
+      { "value": "0", "label": "Pills or Medicines" },
+      { "value": "98%", "label": "Client Satisfaction Rate" }
+    ],
+    "images": [
+      {
+        "src": "/images/proof/proof-screenshot-1.png",
+        "alt": "Client Assessment Score & Relief",
+        "category": "Assessment"
+      },
+      {
+        "src": "/images/proof/proof-screenshot-2.png",
+        "alt": "Anxiety Score Drop Progress",
+        "category": "Progress"
+      },
+      {
+        "src": "/images/proof/proof-screenshot-3.png",
+        "alt": "Somatic Assessment Report",
+        "category": "Report"
+      },
+      {
+        "src": "/images/proof/proof-whatsapp-1.jpg",
+        "alt": "Client WhatsApp Message: Slept 7 hours straight without panic",
+        "category": "WhatsApp Feedback"
+      },
+      {
+        "src": "/images/proof/proof-whatsapp-2.jpg",
+        "alt": "Client WhatsApp Message: Chest tightness completely gone",
+        "category": "WhatsApp Feedback"
+      },
+      {
+        "src": "/images/proof/proof-whatsapp-3.jpg",
+        "alt": "Client WhatsApp Message: Sunday evenings no longer stressful",
+        "category": "WhatsApp Feedback"
+      },
+      {
+        "src": "/images/proof/proof-whatsapp-4.jpg",
+        "alt": "Client WhatsApp Message: Focused at work without brain fog",
+        "category": "WhatsApp Feedback"
+      },
+      {
+        "src": "/images/proof/proof-whatsapp-5.jpg",
+        "alt": "Client WhatsApp Message: Stopped taking sedatives",
+        "category": "WhatsApp Feedback"
+      },
+      {
+        "src": "/images/proof/proof-whatsapp-6.jpg",
+        "alt": "Client WhatsApp Message: Neck and shoulder stiffness disappeared",
+        "category": "WhatsApp Feedback"
+      },
+      {
+        "src": "/images/proof/proof-whatsapp-7.jpg",
+        "alt": "Client WhatsApp Message: Feeling light, energetic and calm",
+        "category": "WhatsApp Feedback"
+      },
+      {
+        "src": "/images/proof/proof-whatsapp-8.jpg",
+        "alt": "Client WhatsApp Message: Life-changing experience",
+        "category": "WhatsApp Feedback"
+      }
+    ]
+  },
+  "targetAudience": {
+    "title": "This Is For You If…",
+    "subtitle": "If you recognize yourself in these daily struggles, you are not alone — and you do not have to live like this.",
+    "points": [
+      {
+        "title": "Want Your Old Energetic Self Back",
+        "description": "You remember being energetic, fun, and confident, and you want that person back without quitting your job."
+      },
+      {
+        "title": "Sunday Evening Dread",
+        "description": "Your Sunday evenings are ruined because your mind is already sitting in Monday’s meetings."
+      },
+      {
+        "title": "Waking Up Exhausted",
+        "description": "You wake up tired, even after 7 hours of sleep, and need two cups of chai or coffee just to feel human."
+      },
+      {
+        "title": "Chronic Physical Tension",
+        "description": "Your neck is stiff, your shoulders feel like stone, and your lower back aches by 4 PM. You can’t remember the last time your body felt light."
+      },
+      {
+        "title": "Nighttime Brain Overdrive",
+        "description": "You close your laptop at 9 PM, but your brain doesn’t. You lie in bed replaying conversations, pending tasks, and “what will my manager think.”"
+      },
+      {
+        "title": "Tried Everything But It Returns",
+        "description": "You’ve done gym, diets, yoga, meditation, breathing routines, webinars. But anxiety keeps returning. Palpitations. Chest tightness. Sleepless nights. It just won’t stop."
+      },
+      {
+        "title": "Disconnected From Loved Ones",
+        "description": "You’re missing life — moments with people you love. Trapped in fear, overthinking, and anxiety."
+      },
+      {
+        "title": "Suffering Silently in Solitude",
+        "description": "Everyone sees you as the strong, sorted one, so you have no one to vent to. You just keep it all inside."
+      }
+    ],
+    "ctaText": "Book my free Anxiety-Breakdown Consultation"
+  },
+  "methodology": {
+    "title": "Introducing: The 6-Axis Psycho-Somatic Reset",
+    "subtitle": "A 90-day guided program that finds the real reason behind your stress, anxiety, and exhaustion, and resets your mind and body from the root, without quitting your job or living at the gym.",
+    "infographic": {
+      "src": "/images/6-AxisMethod.png",
+      "alt": "6-Axis Psycho-Somatic Method Overview Diagram"
+    },
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Step 1: The Root Cause Scan",
+        "subtitle": "It Starts With Your Root Cause Analysis",
+        "description": "Before a single exercise, we build your personal report across 11 areas, diagnosing exactly where tension and dysregulation originate:",
+        "highlights": [
+          { "label": "Triggers", "desc": "Sunday nights, appraisals, the 11 PM replay" },
+          { "label": "Body tension", "desc": "Chest, neck, jaw, stomach tightness" },
+          { "label": "Posture", "desc": "Years of laptop hunching & collapsed breathing" },
+          { "label": "Sleep", "desc": "Late nights, 3 AM wake-ups, phone in bed" },
+          { "label": "Habits", "desc": "Caffeine spikes, blue screens, late heavy dinners" },
+          { "label": "Blood markers", "desc": "Nutrition & metabolic gaps silently draining energy" }
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Step 2: The Dopamine & Gut Reset",
+        "subtitle": "Repairing Your Second Brain & Cravings",
+        "description": "Your mind-gut coach targets what keeps you on edge: the 3 PM coffee crash, late dinners, and 1 AM mindless phone scrolling.",
+        "keyPoints": [
+          "These habits aren’t a discipline problem — your brain is simply chasing quick chemical relief.",
+          "You’ll make small, office-friendly swaps with zero 6 AM meal prep and no giving up everything you love.",
+          "Your energy steadies throughout high-pressure work days, and relentless sugar/caffeine cravings fade away naturally."
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Step 3: The 6-Axis Body Unlock",
+        "subtitle": "Releasing Stored Trauma & Chronic Tension",
+        "description": "Your somatic reset coach releases years of stored stress: the hunched posture, locked shoulders, and tight chest before every team review.",
+        "keyPoints": [
+          "Combines 6-direction spinal movements, Bhramari pranayama, 4-7-8 vagus nerve breathing, and restorative Yoga Nidra customised for your body.",
+          "Requires just 10 minutes a day, plus 2-minute discreet desk resets you can do between Zoom calls.",
+          "Within weeks, your autonomic nervous system finally switches from 'fight-or-flight' to rest, and your body stops bracing all day."
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Step 4: The Habit Lock-In & Accountability Protocol",
+        "subtitle": "Permanent Calm as Your Default Baseline",
+        "description": "Most wellness programs fail the moment work gets busy. That’s why your accountability coach checks in daily on your sleep, movement, nutrition, and mood.",
+        "keyPoints": [
+          "Guided somatic journaling helps you pinpoint mental loops like 'I keep replaying difficult conversations in my head.'",
+          "You’ll build a customized personal SOS plan so you know the exact 90-second protocol to run when panic or acute anger strikes.",
+          "By Day 90, calm stops being something you desperately chase. It becomes your effortless daily default."
+        ]
+      }
+    ],
+    "ctaText": "Book my free Anxiety-Breakdown Consultation"
+  },
+  "notForYou": {
+    "title": "This Is NOT For You If…",
+    "subtitle": "We are uncompromising about results, which is why we only work with those who are truly ready for genuine transformation.",
+    "points": [
+      {
+        "text": "You’re looking for a magic pill, quick fix, or an overnight silver bullet."
+      },
+      {
+        "text": "You’re not willing to invest even 20–30 minutes a day into your mental & bodily health."
+      },
+      {
+        "text": "You want to keep doing everything the exact same way and still expect to feel completely different."
+      },
+      {
+        "text": "You’re currently in acute crisis or having thoughts of harming yourself — please immediately contact national crisis support:",
+        "emergency": {
+          "service": "Tele-MANAS (Govt. of India)",
+          "helpline": "1800-891-4416",
+          "available": "24/7 Toll-Free Crisis Care"
+        }
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How is this different from regular talk therapy or psychiatry?",
+      "answer": "Traditional talk therapy focuses primarily on the intellectual/cognitive mind, while psychiatry often relies on pharmaceutical sedatives. Our 6-Axis Psycho-Somatic method addresses the root nervous system dysregulation stored physically in your fascia, gut-brain axis, and breathing mechanics. We don't just talk about trauma; we physically unlock the stress patterns holding it."
+    },
+    {
+      "question": "Do I need to take pills, medications, or expensive supplements?",
+      "answer": "No. The entire methodology is 100% natural and drug-free. We use targeted somatic resets, spinal realignment, vagal nerve stimulation, circadian rhythm corrections, and practical dietary adjustments."
+    },
+    {
+      "question": "I have an extremely busy corporate work schedule. Can I really do this?",
+      "answer": "Yes! The program is specifically built for busy working professionals and entrepreneurs. The core routine requires only 10–15 minutes each morning, plus 2-minute micro desk resets you can do between meetings without anyone noticing."
+    },
+    {
+      "question": "What happens during the Free Anxiety-Breakdown Consultation?",
+      "answer": "In your private 1-on-1 session, we review your current symptoms, identify your primary stress triggers, assess your somatic tension areas (neck, jaw, chest, gut), and map out a tailored 3-week roadmap to reset your nervous system."
+    },
+    {
+      "question": "What is the 'Or Otherwise We Do It For Free' guarantee?",
+      "answer": "We stand 100% behind the 6-Axis Method. If you follow your customized daily protocols and don't see a significant measurable improvement in your Anxiety & Mental Health Score within 3 weeks, we continue coaching you free of charge until you achieve the promised transformation."
+    }
+  ],
+  "popupModal": {
+    "stepBadge": "Step 2/3",
+    "title": "Let's complete what you started",
+    "subtitle": "Lock in your complimentary 1-on-1 Anxiety-Breakdown Consultation session.",
+    "fields": [
+      { "name": "name", "label": "Full Name", "placeholder": "Enter your full name", "required": true, "type": "text" },
+      { "name": "email", "label": "Email Address", "placeholder": "Enter your email address", "required": true, "type": "email" },
+      { "name": "phone", "label": "WhatsApp / Phone Number", "placeholder": "Enter 10-digit WhatsApp number", "required": true, "type": "tel" }
+    ],
+    "submitText": "Continue to Book Consultation",
+    "subtext": "If slots are full , kindly try later",
+    "privacy": "🔒 Your information is 100% private, confidential and never shared."
+  },
+  "thankYou": {
+    "title": "You're One Step Away From Complete Calm!",
+    "subtitle": "Your consultation request has been submitted. Please complete the quick 60-second intake form below so Coach Abhijit can prepare your personalized Root Cause Scan.",
+    "tallyEmbedUrl": "https://tally.so/embed/KppG7M?hideTitle=1&transparentBackground=1&dynamicHeight=1",
+    "nextSteps": [
+      "Fill out the confidential intake questions above.",
+      "Our team will reach out via WhatsApp to confirm your preferred consultation time slot.",
+      "Keep a quiet space ready for your 1-on-1 nervous system breakdown session."
+    ]
+  }
+}
+

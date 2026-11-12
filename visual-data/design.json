@@ -1,0 +1,87 @@
+{
+  "theme": {
+    "name": "Psycho-Somatic Calm & Vitality",
+    "description": "High-end medical-wellness aesthetic combining grounding dark teal (#1F5F5B) and energizing terracotta coral (#E8704A) on pristine soft ivory and white backgrounds with modern glassmorphism and subtle elevation."
+  },
+  "colors": {
+    "primary": {
+      "DEFAULT": "#E8704A",
+      "hover": "#D85E38",
+      "light": "#FFF3EE",
+      "foreground": "#FFFFFF",
+      "glow": "rgba(232, 112, 74, 0.25)"
+    },
+    "secondary": {
+      "DEFAULT": "#1F5F5B",
+      "hover": "#174946",
+      "light": "#EDF5F4",
+      "dark": "#123735",
+      "foreground": "#FFFFFF"
+    },
+    "accent": {
+      "blue": "#014D82",
+      "lightBlue": "#4A90E2",
+      "sage": "#D6E5E0",
+      "gold": "#F59E0B"
+    },
+    "background": {
+      "DEFAULT": "#FBFBFA",
+      "subtle": "#F4F7F6",
+      "card": "#FFFFFF",
+      "darkCard": "#174845"
+    },
+    "text": {
+      "heading": "#0F172A",
+      "body": "#334155",
+      "muted": "#64748B",
+      "inverse": "#FFFFFF",
+      "subtle": "#94A3B8"
+    },
+    "border": {
+      "subtle": "#E2E8F0",
+      "focus": "#E8704A",
+      "teal": "rgba(31, 95, 91, 0.15)"
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "sans": "var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+      "display": "var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, sans-serif"
+    },
+    "scale": {
+      "heroH1": {
+        "mobile": "text-2xl sm:text-3xl leading-snug",
+        "desktop": "md:text-4xl lg:text-5xl lg:leading-[1.2] font-black"
+      },
+      "sectionH2": {
+        "mobile": "text-2xl sm:text-3xl font-extrabold",
+        "desktop": "md:text-4xl font-black"
+      },
+      "cardH3": {
+        "mobile": "text-lg font-bold",
+        "desktop": "text-xl font-bold"
+      },
+      "bodyText": {
+        "mobile": "text-sm leading-relaxed",
+        "desktop": "text-base md:text-lg leading-relaxed"
+      }
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-[#E8704A] to-[#F17E5B] px-8 py-4 text-lg font-bold text-white shadow-xl shadow-[#E8704A]/30 transition-all duration-300 hover:from-[#DF633D] hover:to-[#E8704A] hover:shadow-2xl hover:shadow-[#E8704A]/40 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer border-b-4 border-[#014D82]",
+      "secondary": "inline-flex items-center justify-center gap-2 rounded-2xl bg-[#1F5F5B] px-6 py-3 text-base font-semibold text-white shadow-md hover:bg-[#174946] transition-all cursor-pointer",
+      "outline": "inline-flex items-center justify-center gap-2 rounded-2xl border-2 border-[#1F5F5B] px-6 py-3 text-base font-bold text-[#1F5F5B] hover:bg-[#1F5F5B] hover:text-white transition-all cursor-pointer"
+    },
+    "cards": {
+      "light": "bg-white rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-900/5 p-6 sm:p-8 hover:border-[#1F5F5B]/30 hover:shadow-2xl hover:shadow-[#1F5F5B]/10 transition-all duration-300",
+      "teal": "bg-[#1F5F5B] text-white rounded-3xl p-6 sm:p-8 border border-white/10 shadow-xl",
+      "accent": "bg-gradient-to-br from-[#FFF8F5] to-white rounded-3xl border border-[#E8704A]/20 shadow-lg p-6 sm:p-8"
+    },
+    "badge": {
+      "hero": "inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1F5F5B] text-white text-xs sm:text-sm font-semibold shadow-sm border border-white/20 tracking-wide uppercase",
+      "accent": "inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFF3EE] text-[#E8704A] text-xs font-bold border border-[#E8704A]/20"
+    }
+  }
+}
+
