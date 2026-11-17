@@ -16,7 +16,7 @@ export default function NotForYouSection({ data }: NotForYouSectionProps) {
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-200 text-slate-800 text-xs sm:text-sm font-bold tracking-wide uppercase mb-3">
             <AlertTriangle className="w-4 h-4 text-amber-600" />
-            Important Candid Notice
+            Important candid notice
           </div>
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-[#0F172A]">
             {data.title}
@@ -34,10 +34,10 @@ export default function NotForYouSection({ data }: NotForYouSectionProps) {
             return (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 15 }}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1, duration: 0.5 }}
+                viewport={{ once: true, amount: 0.05 }}
+                transition={{ duration: 0.25 }}
                 className={`p-6 rounded-2xl border transition-all ${
                   isEmergency
                     ? "bg-amber-50/90 border-amber-300 md:col-span-2 shadow-sm"

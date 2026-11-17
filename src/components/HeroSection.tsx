@@ -23,44 +23,22 @@ export default function HeroSection({ data, onOpenModal }: HeroSectionProps) {
 
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Top Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 sm:px-5 sm:py-2 rounded-full bg-[#1F5F5B] text-white text-xs sm:text-sm font-bold tracking-wide shadow-md shadow-[#1F5F5B]/15 uppercase mb-6"
-        >
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 sm:px-5 sm:py-2 rounded-full bg-[#1F5F5B] text-white text-xs sm:text-sm font-bold tracking-wide shadow-md shadow-[#1F5F5B]/15 uppercase mb-6">
           <Sparkles className="w-3.5 h-3.5 text-[#E8704A]" />
           <span>{data.badge}</span>
-        </motion.div>
+        </div>
 
         {/* Main Headline */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.15, duration: 0.7 }}
-          className="text-2xl sm:text-4xl md:text-5xl lg:text-[52px] font-black tracking-tight text-[#0F172A] leading-[1.25] sm:leading-[1.2] max-w-4xl mx-auto"
-        >
-          <span>{data.headline.prefix} </span>
+        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[52px] font-black tracking-tight text-[#0F172A] leading-[1.25] sm:leading-[1.2] max-w-4xl mx-auto">
+          <span>Lower your </span>
           <span className="text-[#E8704A] underline decoration-[#E8704A]/30 decoration-wavy decoration-2">
-            {data.headline.highlight1}
+            anxiety score
           </span>
-          <span> {data.headline.middle} </span>
-          <span className="text-[#1F5F5B] font-extrabold bg-[#1F5F5B]/10 px-2 py-0.5 rounded-lg inline-block">
-            {data.headline.highlight2}
-          </span>
-          <span> {data.headline.suffix} </span>
-          <span className="text-[#1F5F5B] underline decoration-[#1F5F5B] font-black">
-            {data.headline.highlight3}
-          </span>
-        </motion.h1>
+          <span> in 90 days without therapy and pills, using our 6-axis psycho-somatic method, or we keep working with you for free</span>
+        </h1>
 
         {/* Sub-headline */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.7 }}
-          className="mt-6 sm:mt-8 text-base sm:text-xl text-slate-700 font-medium leading-relaxed max-w-3xl mx-auto"
-        >
+        <p className="mt-6 sm:mt-8 text-base sm:text-xl text-slate-700 font-medium leading-relaxed max-w-3xl mx-auto">
           <strong className="text-[#0F172A] font-semibold">Fix your anxiety from the root, not just the symptoms.</strong>
           <span className="block mt-2 text-slate-600 sm:text-lg">
             We find what’s really driving it, then repair your gut-mind chemistry, sleep, posture, and stress-related body pain.
@@ -68,13 +46,13 @@ export default function HeroSection({ data, onOpenModal }: HeroSectionProps) {
           <span className="block mt-2 text-slate-600 sm:text-lg">
             We measure your progress on the GAD-7 anxiety scale. Your first score check is on day 21.
           </span>
-        </motion.p>
+        </p>
 
         {/* VSL Video Frame */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.45, duration: 0.8 }}
+          transition={{ duration: 0.3 }}
           className="mt-8 sm:mt-12 relative w-full max-w-3xl sm:max-w-4xl mx-auto"
         >
           {/* Subtle Ambient Glow Behind Video Frame */}
@@ -104,12 +82,7 @@ export default function HeroSection({ data, onOpenModal }: HeroSectionProps) {
         </motion.div>
 
         {/* CTA Container */}
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.7 }}
-          className="mt-8 sm:mt-10 flex flex-col items-center justify-center gap-3"
-        >
+        <div className="mt-8 sm:mt-10 flex flex-col items-center justify-center gap-3">
           <button
             onClick={onOpenModal}
             className="group relative inline-flex items-center justify-center gap-3 w-full sm:w-auto rounded-2xl bg-gradient-to-r from-[#E8704A] to-[#F17E5B] px-8 sm:px-12 py-4 sm:py-5 text-base sm:text-xl font-black text-white shadow-xl shadow-[#E8704A]/30 transition-all duration-300 hover:from-[#DF633D] hover:to-[#E8704A] hover:shadow-2xl hover:shadow-[#E8704A]/40 hover:-translate-y-1 active:translate-y-0 cursor-pointer border-b-4 border-[#014D82]"
@@ -123,15 +96,10 @@ export default function HeroSection({ data, onOpenModal }: HeroSectionProps) {
             <AlertCircle className="w-4 h-4 text-amber-600 shrink-0" />
             <span>{data.urgencyNote}</span>
           </div>
-        </motion.div>
+        </div>
 
         {/* Trust Value Props Strip */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="mt-10 sm:mt-14 pt-8 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-left"
-        >
+        <div className="mt-10 sm:mt-14 pt-8 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-left">
           {data.trustBadges.map((badge, idx) => (
             <div
               key={idx}
@@ -143,7 +111,7 @@ export default function HeroSection({ data, onOpenModal }: HeroSectionProps) {
               </span>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

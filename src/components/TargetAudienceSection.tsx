@@ -46,7 +46,7 @@ export default function TargetAudienceSection({
         <div className="mx-auto max-w-3xl text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1F5F5B]/10 text-[#1F5F5B] text-xs sm:text-sm font-bold tracking-wide uppercase mb-3">
             <CheckCircle2 className="w-4 h-4 text-[#E8704A]" />
-            Relatable Patterns
+            Relatable patterns
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-[#0F172A]">
             {data.title}
@@ -63,10 +63,10 @@ export default function TargetAudienceSection({
             return (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.08, duration: 0.5 }}
+                viewport={{ once: true, amount: 0.05 }}
+                transition={{ duration: 0.25 }}
                 className="group relative flex items-start gap-4 p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/80 shadow-md shadow-slate-900/5 hover:border-[#1F5F5B]/40 hover:shadow-xl hover:shadow-[#1F5F5B]/10 transition-all duration-300"
               >
                 <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#1F5F5B]/10 to-[#1F5F5B]/5 text-[#1F5F5B] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#1F5F5B] group-hover:text-white transition-all duration-300">
@@ -90,14 +90,14 @@ export default function TargetAudienceSection({
           <div className="inline-block p-1 rounded-3xl bg-gradient-to-r from-[#1F5F5B] via-[#E8704A] to-[#1F5F5B]">
             <div className="bg-white rounded-[22px] px-6 sm:px-10 py-6 sm:py-8 text-center max-w-2xl">
               <h3 className="text-xl sm:text-2xl font-black text-[#0F172A] mb-2">
-                Don’t spend another month surviving in survival mode.
+                Don’t spend another month stuck in survival mode.
               </h3>
               <p className="text-sm sm:text-base text-slate-600 mb-6">
                 Your body was not designed to carry chronic stress 24/7. Let’s identify exactly what’s keeping your nervous system trapped.
               </p>
               <button
                 onClick={onOpenModal}
-                className="group inline-flex items-center justify-center gap-3 w-full sm:w-auto rounded-2xl bg-[#E8704A] hover:bg-[#D85E38] text-white px-8 sm:px-10 py-4 text-base sm:text-lg font-bold shadow-lg shadow-[#E8704A]/30 transition-all hover:scale-105 active:scale-95 cursor-pointer border-b-4 border-[#014D82]"
+                className="group inline-flex items-center justify-center gap-3 w-full sm:w-auto rounded-2xl bg-[#E8704A] hover:bg-[#D85E38] text-white px-8 sm:px-10 py-4 text-base sm:text-lg font-black shadow-lg shadow-[#E8704A]/30 transition-all hover:scale-105 active:scale-95 cursor-pointer border-b-4 border-[#014D82]"
               >
                 <span>{data.ctaText}</span>
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />

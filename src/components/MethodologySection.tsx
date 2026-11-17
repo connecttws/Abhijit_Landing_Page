@@ -41,7 +41,7 @@ export default function MethodologySection({
         <div className="mx-auto max-w-4xl text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1F5F5B] text-white text-xs sm:text-sm font-bold tracking-wide uppercase mb-4 shadow-md shadow-[#1F5F5B]/15">
             <Compass className="w-4 h-4 text-[#E8704A]" />
-            The Breakthrough Protocol
+            The breakthrough protocol
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-[#0F172A] leading-tight">
             {data.title}
@@ -58,13 +58,13 @@ export default function MethodologySection({
               <div className="md:col-span-7">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#D6E5E0] text-xs font-bold uppercase mb-3">
                   <Sparkles className="w-3.5 h-3.5 text-[#E8704A]" />
-                  Proprietary Framework
+                  Proprietary framework
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-black mb-3">
-                  The 6 Biological Axes of Anxiety
+                  The 6 biological axes of anxiety
                 </h3>
                 <p className="text-sm sm:text-base text-[#D6E5E0] leading-relaxed mb-6">
-                  Anxiety is not just in your head. It is locked in your gut microbiome, vagus nerve, thoracic spine, fascia, and hormonal clock. Our 6-Axis methodology systematically resets each layer.
+                  Anxiety is not only in your head. It shows up in your gut, your breath, your spine, your sleep and your daily habits. Our 6-Axis methodology systematically resets each layer.
                 </p>
                 <div className="flex flex-wrap gap-2 text-xs font-semibold">
                   <span className="bg-white/10 px-3 py-1 rounded-full border border-white/15">1. Gut-Brain Chemistry</span>
@@ -106,10 +106,10 @@ export default function MethodologySection({
             return (
               <motion.div
                 key={step.stepNumber}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                viewport={{ once: true, amount: 0.05 }}
+                transition={{ duration: 0.25 }}
                 className={`flex flex-col md:flex-row gap-6 sm:gap-10 items-stretch p-6 sm:p-10 rounded-3xl border transition-all duration-300 ${
                   isEven
                     ? "bg-[#1F5F5B] text-white border-[#1F5F5B] shadow-xl"

@@ -6,14 +6,14 @@
     "tagline": "Fix your anxiety from the root, not just the symptoms"
   },
   "hero": {
-    "badge": "It is not a Therapy Session",
+    "badge": "It is not a therapy session",
     "headline": {
       "prefix": "Lower your",
-      "highlight1": "anxiety score in 90 days",
-      "middle": "without therapy and pills, using our",
-      "highlight2": "6-axis psycho-somatic method,",
-      "suffix": "or we keep working with you",
-      "highlight3": "for free"
+      "highlight1": "anxiety score",
+      "middle": "in 90 days without therapy and pills, using our 6-axis psycho-somatic method, or we keep working with you for free",
+      "highlight2": "",
+      "suffix": "",
+      "highlight3": ""
     },
     "subheadline": "Fix your anxiety from the root, not just the symptoms. We find what’s really driving it, then repair your gut-mind chemistry, sleep, posture, and stress-related body pain.",
     "vslVideo": {
@@ -97,7 +97,7 @@
     ]
   },
   "targetAudience": {
-    "title": "This Is For You If…",
+    "title": "This is for you if…",
     "subtitle": "If you recognize yourself in these daily struggles, you are not alone — and you do not have to live like this.",
     "points": [
       {
@@ -136,7 +136,7 @@
     "ctaText": "Book my free Anxiety-Breakdown Consultation"
   },
   "methodology": {
-    "title": "Introducing: The 6-Axis Psycho-Somatic Reset",
+    "title": "Introducing: The 6-axis psycho-somatic reset",
     "subtitle": "A 90-day guided program that finds the real reason behind your stress, anxiety, and exhaustion, and resets your mind and body from the root, without quitting your job or living at the gym.",
     "infographic": {
       "src": "/images/6-AxisMethod.png",
@@ -147,7 +147,7 @@
         "stepNumber": 1,
         "title": "Step 1: The Root Cause Scan",
         "subtitle": "It Starts With Your Root Cause Analysis",
-        "description": "Before a single exercise, we build your personal report across 11 areas, diagnosing exactly where tension and dysregulation originate:",
+        "description": "Before a single exercise, we build your personal report across 11 areas, showing where your tension and anxiety start:",
         "highlights": [
           { "label": "Triggers", "desc": "Sunday nights, appraisals, the 11 PM replay" },
           { "label": "Body tension", "desc": "Chest, neck, jaw, stomach tightness" },
@@ -163,7 +163,7 @@
         "subtitle": "Repairing Your Second Brain & Cravings",
         "description": "Your mind-gut coach targets what keeps you on edge: the 3 PM coffee crash, late dinners, and 1 AM mindless phone scrolling.",
         "keyPoints": [
-          "These habits aren’t a discipline problem — your brain is simply chasing quick chemical relief.",
+          "These habits aren’t a discipline problem — your brain is simply chasing quick relief.",
           "You’ll make small, office-friendly swaps with zero 6 AM meal prep and no giving up everything you love.",
           "Your energy steadies throughout high-pressure work days, and relentless sugar/caffeine cravings fade away naturally."
         ]
@@ -171,7 +171,7 @@
       {
         "stepNumber": 3,
         "title": "Step 3: The 6-Axis Body Unlock",
-        "subtitle": "Releasing Stored Trauma & Chronic Tension",
+        "subtitle": "Releasing stored stress and chronic tension",
         "description": "Your somatic reset coach releases years of stored stress: the hunched posture, locked shoulders, and tight chest before every team review.",
         "keyPoints": [
           "Combines 6-direction spinal movements, Bhramari pranayama, 4-7-8 vagus nerve breathing, and restorative Yoga Nidra customized for your body.",
@@ -187,6 +187,7 @@
         "keyPoints": [
           "Guided somatic journaling helps you pinpoint mental loops like ‘I keep replaying difficult conversations in my head.’",
           "You’ll build a customized personal SOS plan so you know the exact 90-second protocol to run when panic or acute anger strikes.",
+          "We measure your GAD-7 score on day 1, day 21, day 45 and day 90, so you can see the change.",
           "By Day 90, calm stops being something you desperately chase. It becomes your effortless daily default."
         ]
       }
@@ -194,7 +195,7 @@
     "ctaText": "Book my free Anxiety-Breakdown Consultation"
   },
   "notForYou": {
-    "title": "This Is NOT For You If…",
+    "title": "This is not for you if…",
     "subtitle": "We are uncompromising about results, which is why we only work with those who are truly ready for genuine transformation.",
     "points": [
       {
@@ -218,28 +219,32 @@
   },
   "faqs": [
     {
-      "question": "How is this different from regular talk therapy or psychiatry?",
-      "answer": "Traditional talk therapy focuses primarily on the intellectual/cognitive mind, while psychiatry often relies on pharmaceutical sedatives. Our 6-Axis Psycho-Somatic method addresses the root nervous system dysregulation stored physically in your fascia, gut-brain axis, and breathing mechanics. We don’t just talk about trauma; we physically unlock the stress patterns holding it."
-    },
-    {
       "question": "Do I need to take pills, medications, or expensive supplements?",
-      "answer": "No. The entire methodology is 100% natural and drug-free. We use targeted somatic resets, spinal realignment, vagal nerve stimulation, circadian rhythm corrections, and practical dietary adjustments."
+      "answer": "No. The entire methodology is 100% natural and drug-free. We use targeted somatic resets, spinal realignment, vagal nerve stimulation, circadian rhythm corrections, and practical dietary adjustments. But, if your doctor has prescribed medication, keep taking it. Any change to it is a decision for you and your doctor."
     },
     {
-      "question": "I have an extremely busy corporate work schedule. Can I really do this?",
-      "answer": "Yes! The program is specifically built for busy working professionals and entrepreneurs. The core routine requires only 10–15 minutes each morning, plus 2-minute micro desk resets you can do between meetings without anyone noticing."
+      "question": "I have an extremely busy work schedule. Can I really do this?",
+      "answer": "Yes. It is built for IT professionals with full calendars. The core practice is 10 minutes a day, plus 2-minute desk resets between calls. With journaling and your daily check-in, plan for 20 to 30 minutes in total, and one private live session a week."
     },
     {
-      "question": "What happens during the Free Anxiety-Breakdown Consultation?",
-      "answer": "In your private 1-on-1 session, we review your current symptoms, identify your primary stress triggers, assess your somatic tension areas (neck, jaw, chest, gut), and map out a tailored 3-week roadmap to reset your nervous system."
+      "question": "What happens during the free Anxiety-Breakdown Consultation?",
+      "answer": "It is a private 30 to 45 minute call with Abhijit. You get your current anxiety score, the two or three root causes driving your anxiety, one breathing reset you can use the same day, and a clear picture of what your 90 days would look like."
     },
     {
-      "question": "What is the ‘Or Otherwise We Do It For Free’ guarantee?",
-      "answer": "We stand 100% behind the 6-Axis Method. If you follow your customized daily protocols and don’t see a significant measurable improvement in your Anxiety & Mental Health Score within 3 weeks, we continue coaching you free of charge until you achieve the promised transformation."
+      "question": "What is the guarantee?",
+      "answer": "We stand 100% behind the 6-Axis Method. If you follow your customized daily protocols and don’t see a significant measurable improvement in your Anxiety & Mental Health Score in 90 days, we continue coaching you free of charge until you achieve the promised transformation."
+    },
+    {
+      "question": "Are the sessions live or recorded?",
+      "answer": "Both. You get one private live session with Abhijit every week on Zoom, plus recorded sessions to practise with between calls."
+    },
+    {
+      "question": "I’ve already tried yoga and meditation. Why would this work?",
+      "answer": "What you tried was a technique on its own. This starts by finding your cause in the Root Cause Scan. Then it works on body, sleep, gut and habits together, and a coach checks in with you every day."
     }
   ],
   "popupModal": {
-    "stepBadge": "Step 2/3",
+    "stepBadge": "STEP 1 OF 3",
     "title": "Let’s complete what you started",
     "subtitle": "Lock in your complimentary 1-on-1 Anxiety-Breakdown Consultation session.",
     "fields": [

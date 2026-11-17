@@ -24,10 +24,10 @@ export default function FAQSection({ faqs, onOpenModal }: FAQSectionProps) {
         <div className="text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1F5F5B]/10 text-[#1F5F5B] text-xs sm:text-sm font-bold uppercase mb-3">
             <HelpCircle className="w-4 h-4 text-[#E8704A]" />
-            Frequently Asked Questions
+            Frequently asked questions
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-[#0F172A]">
-            Everything You Need To Know
+            Everything you need to know
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 font-medium">
             Clear, upfront answers about our methods, time commitment, and guarantee.
@@ -44,8 +44,8 @@ export default function FAQSection({ faqs, onOpenModal }: FAQSectionProps) {
                 key={idx}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.05, duration: 0.4 }}
+                viewport={{ once: true, amount: 0.05 }}
+                transition={{ duration: 0.25 }}
                 className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-xs transition-colors hover:border-[#1F5F5B]/40"
               >
                 <button
@@ -88,7 +88,7 @@ export default function FAQSection({ faqs, onOpenModal }: FAQSectionProps) {
         {/* Section Bottom Card */}
         <div className="mt-12 sm:mt-16 p-8 rounded-3xl bg-gradient-to-r from-[#1F5F5B] to-[#26726E] text-white text-center shadow-xl">
           <h3 className="text-2xl sm:text-3xl font-black mb-3">
-            Still Have Questions?
+            Still have questions?
           </h3>
           <p className="text-sm sm:text-base text-[#D6E5E0] max-w-xl mx-auto mb-6">
             Get personalized answers on your specific symptoms, daily schedule, and stress triggers during your complimentary consultation.

@@ -48,7 +48,7 @@ export default function ProofSection({ data, onOpenModal }: ProofSectionProps) {
         <div className="mx-auto max-w-3xl text-center mb-10 sm:mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/10 text-[#D6E5E0] text-xs sm:text-sm font-bold tracking-wide uppercase mb-3 border border-white/15">
             <CheckCircle2 className="w-4 h-4 text-[#E8704A]" />
-            Real Transformations
+            Real transformations
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
             {data.title}
@@ -101,10 +101,10 @@ export default function ProofSection({ data, onOpenModal }: ProofSectionProps) {
             {filteredImages.map((img, idx) => (
               <motion.div
                 key={img.src}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.05, duration: 0.4 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.05 }}
+                transition={{ duration: 0.25 }}
                 onClick={() => setActiveImage(img.src)}
                 className="relative flex-none w-[280px] sm:w-[340px] md:w-[380px] snap-center rounded-2xl overflow-hidden bg-slate-900/60 border border-white/20 shadow-2xl group cursor-pointer aspect-[3/4]"
               >
@@ -113,7 +113,7 @@ export default function ProofSection({ data, onOpenModal }: ProofSectionProps) {
                   alt={img.alt}
                   fill
                   className="object-contain p-2 transition-transform duration-300 group-hover:scale-102"
-                  sizes="(max-width: 640px) 280px, 380px"
+                  sizes="(max-width: 640px) 340px, 420px"
                 />
                 {/* Overlay Badge & Zoom hint */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between p-4">
@@ -198,7 +198,7 @@ export default function ProofSection({ data, onOpenModal }: ProofSectionProps) {
                 alt="Client Result Enlarged"
                 fill
                 className="object-contain"
-                sizes="100vw"
+                sizes="(max-width: 800px) 100vw, 800px"
               />
             </motion.div>
           </motion.div>
