@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, ShieldCheck, HeartPulse, CheckCircle2, AlertCircle, Sparkles } from "lucide-react";
+import { ArrowRight, ShieldCheck, HeartPulse, CheckCircle2, AlertCircle, Sparkles, Play } from "lucide-react";
 import { HeroData } from "@/types/landing";
 
 interface HeroSectionProps {
@@ -78,13 +78,25 @@ export default function HeroSection({ data, onOpenModal }: HeroSectionProps) {
           <div className="absolute -inset-1.5 bg-gradient-to-r from-[#1F5F5B]/30 via-[#E8704A]/25 to-[#1F5F5B]/30 rounded-3xl blur-xl opacity-75 pointer-events-none" />
 
           <div className="relative aspect-video w-full rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden border-4 border-white/90 bg-[#123835]">
-            <iframe
-              src={data.vslVideo?.url || "https://fast.wistia.net/embed/iframe/sppu5h7owc?seo=false&videoFoam=true"}
-              title={data.vslVideo?.title || "How The 6-Axis Psycho-Somatic Reset Method Works"}
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full border-0"
-            />
+            {data.vslVideo?.url ? (
+              <iframe
+                src={data.vslVideo.url}
+                title={data.vslVideo.title || "Video"}
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full border-0"
+              />
+            ) : (
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-[#123835] via-[#0F2D2A] to-[#0A1F1D] text-white p-6 text-center">
+                {/* Subtle Grid overlay */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
+                <div className="relative z-10 flex flex-col items-center">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white shadow-2xl shadow-black/40">
+                    <Play className="w-7 h-7 sm:w-9 sm:h-9 text-[#E8704A] ml-1 fill-[#E8704A]" />
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </motion.div>
 

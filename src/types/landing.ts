@@ -6,7 +6,7 @@ export interface BrandInfo {
 }
 
 export interface HeroVideo {
-  url: string;
+  url?: string;
   title?: string;
 }
 
