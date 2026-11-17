@@ -65,6 +65,9 @@ export default function HeroSection({ data, onOpenModal }: HeroSectionProps) {
           <span className="block mt-2 text-slate-600 sm:text-lg">
             We find what’s really driving it, then repair your gut-mind chemistry, sleep, posture, and stress-related body pain.
           </span>
+          <span className="block mt-2 text-slate-600 sm:text-lg">
+            We measure your progress on the GAD-7 anxiety scale. Your first score check is on day 21.
+          </span>
         </motion.p>
 
         {/* VSL Video Frame */}

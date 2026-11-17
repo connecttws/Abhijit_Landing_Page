@@ -29,8 +29,8 @@ export default function CoachProfileSection({ onOpenModal }: CoachProfileSection
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent z-10 pointer-events-none" />
 
               <Image
-                src="/images/abhijit-ghosh.jpeg"
-                alt="Abhijit Ghosh - Founder & Lead Coach"
+                src="/images/abhijit-nayyar.jpeg"
+                alt="Abhijit Nayyar - Founder & Lead Coach"
                 fill
                 className="object-cover object-top z-0 transition-transform duration-700 group-hover:scale-105"
                 priority
@@ -43,7 +43,7 @@ export default function CoachProfileSection({ onOpenModal }: CoachProfileSection
                   Founder & Lead Coach
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-black text-white">
-                  Abhijit Ghosh
+                  Abhijit Nayyar
                 </h3>
                 <p className="text-xs sm:text-sm text-[#D6E5E0] font-medium">
                   Psycho-Somatic Anxiety Reset Coach
@@ -66,7 +66,7 @@ export default function CoachProfileSection({ onOpenModal }: CoachProfileSection
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-3 leading-tight">
-              Meet Abhijit Ghosh
+              Meet Abhijit Nayyar
             </h2>
             <h3 className="text-sm sm:text-base font-semibold text-[#D6E5E0] tracking-wide mb-6">
               Creator of the 6-Axis Psycho-Somatic Reset Method
@@ -87,7 +87,7 @@ export default function CoachProfileSection({ onOpenModal }: CoachProfileSection
             {/* Credential Points */}
             <div className="mt-6 pt-6 border-t border-white/15 grid grid-cols-1 sm:grid-cols-3 gap-3 text-left">
               <div className="p-3.5 rounded-xl bg-white/5 border border-white/10">
-                <div className="text-lg font-black text-white">1,200+</div>
+                <div className="text-lg font-black text-white">5,000+</div>
                 <div className="text-xs text-[#D6E5E0] mt-0.5">Chronic Cases Evaluated</div>
               </div>
               <div className="p-3.5 rounded-xl bg-white/5 border border-white/10">

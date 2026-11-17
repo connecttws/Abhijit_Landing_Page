@@ -12,16 +12,16 @@ interface ProofSectionProps {
 }
 
 export default function ProofSection({ data, onOpenModal }: ProofSectionProps) {
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [selectedCategory, setSelectedCategory] = useState<string>("All (11)");
   const [activeImage, setActiveImage] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const categories = ["All", "WhatsApp Feedback", "Assessment"];
+  const categories = ["All (11)", "WhatsApp messages", "Google reviews"];
 
   const filteredImages = data.images.filter((img) => {
-    if (selectedCategory === "All") return true;
-    if (selectedCategory === "WhatsApp Feedback") return img.category === "WhatsApp Feedback";
-    if (selectedCategory === "Assessment") return img.category !== "WhatsApp Feedback";
+    if (selectedCategory === "All (11)") return true;
+    if (selectedCategory === "WhatsApp messages") return img.category === "WhatsApp message";
+    if (selectedCategory === "Google reviews") return img.category === "Google review";
     return true;
   });
 
@@ -69,7 +69,7 @@ export default function ProofSection({ data, onOpenModal }: ProofSectionProps) {
                     : "bg-white/10 text-white/80 hover:bg-white/20"
                 }`}
               >
-                {cat === "All" ? `All Proof (${data.images.length})` : cat}
+                {cat}
               </button>
             ))}
           </div>
@@ -164,7 +164,7 @@ export default function ProofSection({ data, onOpenModal }: ProofSectionProps) {
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </button>
           <p className="mt-3 text-xs sm:text-sm text-[#D6E5E0]">
-            Join 1,200+ individuals who stopped masking symptoms and fixed the root cause.
+            Join 5,000+ people who stopped masking symptoms and worked on the root cause.
           </p>
         </div>
       </div>

@@ -244,7 +244,7 @@ export default function MethodologySection({
             <ArrowRight className="w-6 h-6 transition-transform group-hover:translate-x-1" />
           </button>
           <p className="mt-3 text-xs sm:text-sm text-slate-500 font-medium">
-            3-Week Turnaround Guarantee • No Long-Term Contracts • 100% Risk-Free
+            3-Week Turnaround Guarantee • 100% Risk-Free
           </p>
         </div>
       </div>

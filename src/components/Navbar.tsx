@@ -84,8 +84,7 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
             className="relative inline-flex items-center justify-center gap-2 rounded-full bg-[#1F5F5B] hover:bg-[#174946] text-white px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold shadow-md shadow-[#1F5F5B]/20 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
           >
             <Calendar className="w-3.5 h-3.5 text-[#E8704A]" />
-            <span className="hidden xs:inline">Book Free Session</span>
-            <span className="xs:hidden">Book Session</span>
+            <span>Book free consultation</span>
           </button>
         </div>
       </div>

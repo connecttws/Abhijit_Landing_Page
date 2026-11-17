@@ -3,7 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Fix Your Anxiety & Mental Health Score | 6-Axis Method - Abhijit Ghosh",
+  title: "Reset Your Anxiety in 90 Days | 6-Axis Psycho-Somatic Reset | Abhijit Nayyar",
   description:
     "Fix your anxiety from the root, not just symptoms. A 90-day psycho-somatic reset repairing gut-mind chemistry, sleep, posture, and stress-related tension.",
   icons: {

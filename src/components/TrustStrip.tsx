@@ -6,27 +6,27 @@ import { Users, Clock, ShieldCheck, Award, HeartPulse } from "lucide-react";
 const stats = [
   {
     icon: Users,
-    value: "1,200+",
-    label: "Professionals Helped",
-    subtext: "Corporate leaders & founders",
+    value: "5,000+",
+    label: "People taught",
+    subtext: "Over 7 years of coaching",
   },
   {
     icon: Clock,
     value: "3 Weeks",
-    label: "Average Relief",
+    label: "Anxiety Relief",
     subtext: "Noticeable calm & deep sleep",
   },
   {
     icon: ShieldCheck,
-    value: "Zero Pills",
-    label: "100% Natural",
-    subtext: "No sedatives or chemicals",
+    value: "Zero pills",
+    label: "Body-first method",
+    subtext: "Breath, movement, sleep and food habits",
   },
   {
     icon: HeartPulse,
-    value: "6-Axis",
-    label: "Psycho-Somatic",
-    subtext: "Science-backed physiology",
+    value: "90 days",
+    label: "Guided program",
+    subtext: "One private live session every week",
   },
 ];
 
