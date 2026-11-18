@@ -34,7 +34,7 @@ export default function Home() {
       {/* Trust & Metric Strip */}
       <TrustStrip />
 
-      {/* Proof & Transformation Gallery */}
+      {/* Client Reviews & Transformation Gallery */}
       <ProofSection
         data={contentData.proofSection}
         onOpenModal={handleOpenModal}

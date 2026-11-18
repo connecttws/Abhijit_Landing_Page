@@ -65,10 +65,10 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
             6-Axis method
           </a>
           <a
-            href="#proof"
+            href="#reviews"
             className="hover:text-[#1F5F5B] transition-colors relative py-1 hover:border-b-2 hover:border-[#1F5F5B]"
           >
-            Client proof
+            Client reviews
           </a>
           <a
             href="#for-you"

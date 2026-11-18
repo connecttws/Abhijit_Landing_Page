@@ -26,13 +26,13 @@ export default function CoachProfileSection({ onOpenModal }: CoachProfileSection
           >
             <div className="relative w-full max-w-md aspect-[4/5] rounded-[2.5rem] bg-gradient-to-br from-[#174B48] to-[#123A37] border-2 border-white/20 overflow-hidden shadow-2xl flex items-center justify-center group">
               {/* Photo Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent z-10 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent z-10 pointer-events-none" />
 
               <Image
                 src="/images/abhijit-nayyar.jpeg"
                 alt="Abhijit Nayyar - Founder & Lead Coach"
                 fill
-                className="object-cover object-top z-0 transition-transform duration-700 group-hover:scale-105"
+                className="object-cover object-center z-0 transition-transform duration-700 group-hover:scale-105"
                 priority
                 sizes="(max-width: 1024px) 100vw, 450px"
               />
@@ -75,6 +75,26 @@ export default function CoachProfileSection({ onOpenModal }: CoachProfileSection
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-6 leading-tight">
               I was where you are
             </h2>
+
+            {/* Founder Byline with Portrait Image */}
+            <div className="flex items-center gap-3.5 mb-6 justify-center lg:justify-start p-2.5 rounded-2xl bg-white/5 border border-white/10 w-fit mx-auto lg:mx-0">
+              <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden border border-[#E8704A] shadow-md shrink-0">
+                <Image
+                  src="/images/abhijit-nayyar.jpeg"
+                  alt="Abhijit Nayyar"
+                  fill
+                  className="object-cover object-center"
+                />
+              </div>
+              <div className="text-left">
+                <div className="text-base sm:text-lg font-black text-white leading-tight">
+                  Abhijit Nayyar
+                </div>
+                <div className="text-xs text-[#D6E5E0] font-semibold">
+                  Founder & Lead Coach · Kaivalyadhama Trained
+                </div>
+              </div>
+            </div>
 
             <div className="space-y-4 text-base sm:text-lg text-[#D6E5E0] leading-relaxed">
               <p>

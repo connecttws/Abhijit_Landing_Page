@@ -36,7 +36,7 @@ export default function ProofSection({ data, onOpenModal }: ProofSectionProps) {
   };
 
   return (
-    <section id="proof" className="py-14 sm:py-24 bg-[#1F5F5B] text-white relative overflow-hidden">
+    <section id="reviews" className="py-14 sm:py-24 bg-[#1F5F5B] text-white relative overflow-hidden">
       {/* Background patterns */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl" />
@@ -80,14 +80,14 @@ export default function ProofSection({ data, onOpenModal }: ProofSectionProps) {
           {/* Scroll Navigation Buttons (Desktop) */}
           <button
             onClick={() => scroll("left")}
-            aria-label="Previous proof"
+            aria-label="Previous review"
             className="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white text-[#1F5F5B] items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all cursor-pointer"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={() => scroll("right")}
-            aria-label="Next proof"
+            aria-label="Next review"
             className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white text-[#1F5F5B] items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all cursor-pointer"
           >
             <ChevronRight className="w-6 h-6" />
@@ -138,7 +138,7 @@ export default function ProofSection({ data, onOpenModal }: ProofSectionProps) {
           <div className="flex md:hidden justify-center items-center gap-4 mt-2">
             <button
               onClick={() => scroll("left")}
-              aria-label="Previous proof"
+              aria-label="Previous review"
               className="w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center active:bg-white/30"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -146,7 +146,7 @@ export default function ProofSection({ data, onOpenModal }: ProofSectionProps) {
             <span className="text-xs text-white/70">Swipe or tap arrows</span>
             <button
               onClick={() => scroll("right")}
-              aria-label="Next proof"
+              aria-label="Next review"
               className="w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center active:bg-white/30"
             >
               <ChevronRight className="w-5 h-5" />
@@ -195,7 +195,7 @@ export default function ProofSection({ data, onOpenModal }: ProofSectionProps) {
             >
               <Image
                 src={activeImage}
-                alt="Client Result Enlarged"
+                alt="Client Review Enlarged"
                 fill
                 className="object-contain"
                 sizes="(max-width: 800px) 100vw, 800px"
