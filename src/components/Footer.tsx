@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { PhoneCall } from "lucide-react";
 
 export default function Footer() {
@@ -39,24 +40,29 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm text-slate-300">
               <li>
-                <a href="#method" className="hover:text-white transition-colors">
+                <a href="/#method" className="hover:text-white transition-colors">
                   The 6-axis method
                 </a>
               </li>
               <li>
-                <a href="#proof" className="hover:text-white transition-colors">
+                <a href="/#proof" className="hover:text-white transition-colors">
                   Client results & proof
                 </a>
               </li>
               <li>
-                <a href="#for-you" className="hover:text-white transition-colors">
+                <a href="/#for-you" className="hover:text-white transition-colors">
                   Who this is for
                 </a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-white transition-colors">
+                <a href="/#faq" className="hover:text-white transition-colors">
                   Frequently asked questions
                 </a>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-white transition-colors">
+                  Contact & Support
+                </Link>
               </li>
             </ul>
           </div>
@@ -89,12 +95,16 @@ export default function Footer() {
             <strong>Disclaimer:</strong> The 6-Axis Psycho-Somatic Reset is a behavioral, somatic, and lifestyle coaching system. It is educational in nature and does not replace medical advice, diagnosis, or prescription medical treatments. Do not stop or change any prescribed medication without speaking to your doctor. Client reviews are individual experiences, and results differ from person to person.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 shrink-0">
-            <div className="flex items-center gap-3 text-slate-400 font-medium">
-              <a href="#" className="hover:text-white transition-colors">Privacy</a>
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 sm:gap-3 text-slate-400 font-medium">
+              <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
               <span>·</span>
-              <a href="#" className="hover:text-white transition-colors">Terms</a>
+              <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
               <span>·</span>
-              <a href="#" className="hover:text-white transition-colors">Refund policy</a>
+              <Link href="/refund-policy" className="hover:text-white transition-colors">Refunds</Link>
+              <span>·</span>
+              <Link href="/shipping" className="hover:text-white transition-colors">Shipping</Link>
+              <span>·</span>
+              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
             </div>
             <p>
               &copy; {new Date().getFullYear()} Wellness With Abhijit. All rights reserved.
