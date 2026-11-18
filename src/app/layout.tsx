@@ -7,7 +7,9 @@ export const metadata: Metadata = {
   description:
     "Fix your anxiety from the root, not just symptoms. A 90-day psycho-somatic reset repairing gut-mind chemistry, sleep, posture, and stress-related tension.",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/images/logo.svg", type: "image/svg+xml" },
+    ],
   },
 };
 
