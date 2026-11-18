@@ -98,7 +98,7 @@ export default function ProofSection({ data, onOpenModal }: ProofSectionProps) {
             ref={scrollRef}
             className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory pb-6 pt-2 px-2 -mx-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
           >
-            {filteredImages.map((img, idx) => (
+            {filteredImages.map((img) => (
               <motion.div
                 key={img.src}
                 initial={{ opacity: 0 }}
@@ -106,29 +106,42 @@ export default function ProofSection({ data, onOpenModal }: ProofSectionProps) {
                 viewport={{ once: true, amount: 0.05 }}
                 transition={{ duration: 0.25 }}
                 onClick={() => setActiveImage(img.src)}
-                className="relative flex-none w-[280px] sm:w-[340px] md:w-[380px] snap-center rounded-2xl overflow-hidden bg-slate-900/60 border border-white/20 shadow-2xl group cursor-pointer aspect-[3/4]"
+                className="relative flex-none w-[280px] sm:w-[340px] md:w-[360px] snap-center rounded-2xl overflow-hidden bg-slate-900/90 border border-white/20 shadow-2xl group cursor-pointer flex flex-col transition-all hover:border-white/40 hover:scale-[1.01]"
               >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-contain p-2 transition-transform duration-300 group-hover:scale-102"
-                  sizes="(max-width: 640px) 340px, 420px"
-                />
-                {/* Overlay Badge & Zoom hint */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between p-4">
-                  <div className="self-end bg-black/60 backdrop-blur-md text-white text-xs px-2.5 py-1 rounded-full flex items-center gap-1">
-                    <ZoomIn className="w-3.5 h-3.5" />
-                    <span>Click to zoom</span>
+                {/* Screenshot Image Container */}
+                <div className="relative w-full h-[320px] sm:h-[380px] bg-slate-950/80 flex items-center justify-center p-2.5 overflow-hidden">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-contain p-2 transition-transform duration-300 group-hover:scale-102"
+                    sizes="(max-width: 640px) 340px, 420px"
+                  />
+
+                  {/* Always-Visible Zoom Hint */}
+                  <div className="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md text-white text-[11px] font-medium px-2.5 py-1 rounded-full flex items-center gap-1 border border-white/10 shadow-xs pointer-events-none">
+                    <ZoomIn className="w-3 h-3 text-[#E8704A]" />
+                    <span className="hidden sm:inline">Click to zoom</span>
+                    <span className="sm:hidden">Tap to zoom</span>
                   </div>
-                  <div>
-                    <span className="inline-block bg-[#E8704A] text-white text-[10px] font-bold uppercase px-2 py-0.5 rounded mb-1">
-                      {img.category}
+                </div>
+
+                {/* Always-Visible Review Label & Caption (Shown on both Mobile and Desktop directly) */}
+                <div className="p-3.5 sm:p-4 bg-slate-900 border-t border-white/10 text-left flex flex-col justify-between flex-1 gap-2">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="inline-flex items-center gap-1.5 bg-[#E8704A] text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-xs">
+                      {img.category === "WhatsApp message" ? (
+                        <MessageCircle className="w-3 h-3 shrink-0" />
+                      ) : (
+                        <CheckCircle2 className="w-3 h-3 shrink-0" />
+                      )}
+                      <span>{img.category}</span>
                     </span>
-                    <p className="text-xs sm:text-sm font-semibold text-white line-clamp-2">
-                      {img.alt}
-                    </p>
+                    <span className="text-[11px] text-[#D6E5E0] font-medium">Verified Client</span>
                   </div>
+                  <p className="text-xs sm:text-sm font-semibold text-white leading-snug line-clamp-2">
+                    {img.alt}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -171,38 +184,56 @@ export default function ProofSection({ data, onOpenModal }: ProofSectionProps) {
 
       {/* Lightbox Modal */}
       <AnimatePresence>
-        {activeImage && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setActiveImage(null)}
-            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
-          >
-            <button
-              onClick={() => setActiveImage(null)}
-              aria-label="Close modal"
-              className="absolute top-5 right-5 w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-colors cursor-pointer"
-            >
-              <X className="w-6 h-6" />
-            </button>
+        {activeImage && (() => {
+          const activeItem = data.images.find((img) => img.src === activeImage);
+          return (
             <motion.div
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
-              onClick={(e) => e.stopPropagation()}
-              className="relative max-w-4xl max-h-[85vh] w-full h-[80vh] rounded-2xl overflow-hidden bg-slate-950 flex items-center justify-center p-2"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setActiveImage(null)}
+              className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
             >
-              <Image
-                src={activeImage}
-                alt="Client Review Enlarged"
-                fill
-                className="object-contain"
-                sizes="(max-width: 800px) 100vw, 800px"
-              />
+              <button
+                onClick={() => setActiveImage(null)}
+                aria-label="Close modal"
+                className="absolute top-5 right-5 w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-colors cursor-pointer z-30"
+              >
+                <X className="w-6 h-6" />
+              </button>
+              <motion.div
+                initial={{ scale: 0.9 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.9 }}
+                onClick={(e) => e.stopPropagation()}
+                className="relative max-w-4xl max-h-[88vh] w-full h-[85vh] rounded-2xl overflow-hidden bg-slate-950 flex flex-col items-center justify-center p-2 shadow-2xl border border-white/10"
+              >
+                <div className="relative w-full h-full flex-1">
+                  <Image
+                    src={activeImage}
+                    alt={activeItem?.alt || "Client Review Enlarged"}
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 800px) 100vw, 800px"
+                  />
+                </div>
+                {activeItem && (
+                  <div className="w-full bg-slate-900/95 border-t border-white/10 px-4 py-3 text-left flex flex-col sm:flex-row sm:items-center justify-between gap-2 shrink-0">
+                    <div className="flex items-center gap-2">
+                      <span className="inline-block bg-[#E8704A] text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full">
+                        {activeItem.category}
+                      </span>
+                      <span className="text-xs sm:text-sm text-white font-semibold">
+                        {activeItem.alt}
+                      </span>
+                    </div>
+                    <span className="text-[11px] text-slate-400">Tap outside to close</span>
+                  </div>
+                )}
+              </motion.div>
             </motion.div>
-          </motion.div>
-        )}
+          );
+        })()}
       </AnimatePresence>
     </section>
   );
