@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Reset Your Anxiety in 90 Days | 6-Axis Psycho-Somatic Reset | Abhijit Nayyar",
   description:
-    "Fix your anxiety from the root, not just symptoms. A 90-day psycho-somatic reset repairing gut-mind chemistry, sleep, posture, and stress-related tension.",
+    "Fix your anxiety from the root, not just symptoms. A 90-day psycho-somatic reset measured on the GAD-7 anxiety scale.",
   icons: {
     icon: [
       { url: "/images/logo.svg", type: "image/svg+xml" },

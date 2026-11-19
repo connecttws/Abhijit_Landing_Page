@@ -41,9 +41,6 @@ export default function HeroSection({ data, onOpenModal }: HeroSectionProps) {
         <p className="mt-6 sm:mt-8 text-base sm:text-xl text-slate-700 font-medium leading-relaxed max-w-3xl mx-auto">
           <strong className="text-[#0F172A] font-semibold">Fix your anxiety from the root, not just the symptoms.</strong>
           <span className="block mt-2 text-slate-600 sm:text-lg">
-            We find what’s really driving it, then repair your gut-mind chemistry, sleep, posture, and stress-related body pain.
-          </span>
-          <span className="block mt-2 text-slate-600 sm:text-lg">
             We measure your progress on the GAD-7 anxiety scale. Your first score check is on day 21.
           </span>
         </p>
