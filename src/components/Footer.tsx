@@ -38,20 +38,30 @@ export default function Footer() {
             <h4 className="text-xs font-bold text-white uppercase tracking-widest mb-4">
               Quick navigation
             </h4>
-            <ul className="space-y-2.5 text-sm text-slate-300">
+            <ul className="space-y-2 text-sm text-slate-300">
+              <li>
+                <a href="/#about" className="hover:text-white transition-colors">
+                  About Wellness With Abhijit
+                </a>
+              </li>
               <li>
                 <a href="/#method" className="hover:text-white transition-colors">
                   The 6-axis method
                 </a>
               </li>
               <li>
-                <a href="/#reviews" className="hover:text-white transition-colors">
-                  Client reviews & stories
+                <a href="/#system" className="hover:text-white transition-colors">
+                  System deliverables
                 </a>
               </li>
               <li>
-                <a href="/#for-you" className="hover:text-white transition-colors">
-                  Who this is for
+                <a href="/#testimonials" className="hover:text-white transition-colors">
+                  Client testimonials
+                </a>
+              </li>
+              <li>
+                <a href="/#reviews" className="hover:text-white transition-colors">
+                  Client reviews
                 </a>
               </li>
               <li>

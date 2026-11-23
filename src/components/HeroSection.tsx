@@ -11,7 +11,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ data, onOpenModal }: HeroSectionProps) {
   return (
-    <section className="relative overflow-hidden pt-28 pb-14 sm:pt-36 sm:pb-20 bg-gradient-to-b from-[#F2F7F6] via-[#FAFDFD] to-[#FBFBFA]">
+    <section className="relative overflow-hidden pt-10 pb-14 md:pt-36 sm:pb-20 bg-gradient-to-b from-[#F2F7F6] via-[#FAFDFD] to-[#FBFBFA]">
       {/* Background Ambience */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-gradient-to-b from-[#1F5F5B]/10 via-[#E8704A]/5 to-transparent rounded-full blur-3xl opacity-80" />
