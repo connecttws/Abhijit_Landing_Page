@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import TrustStrip from "@/components/TrustStrip";
@@ -27,6 +28,8 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex flex-col bg-[#FBFBFA] overflow-x-hidden selection:bg-[#E8704A]/20 selection:text-[#E8704A] pb-20 sm:pb-0">
+      <Script src="https://tally.so/widgets/embed.js" strategy="lazyOnload" />
+
       {/* Navigation (Hidden on mobile, visible on desktop) */}
       <Navbar onOpenModal={handleOpenModal} />
 
