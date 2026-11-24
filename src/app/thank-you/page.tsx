@@ -1,51 +1,19 @@
 "use client";
 
-import { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { 
-  CheckCircle2, 
   ArrowLeft, 
   Sparkles, 
   MessageCircle,
-  ZoomIn,
-  X,
-  ChevronLeft,
-  ChevronRight,
   Clock,
   CalendarCheck,
   Video
 } from "lucide-react";
 import Footer from "@/components/Footer";
-import contentData from "@/data/content.json";
-
-const categories = ["All (11)", "WhatsApp messages", "Google reviews"] as const;
 
 export default function ThankYouPage() {
-  const [selectedCategory, setSelectedCategory] = useState<string>("All (11)");
-  const [activeImage, setActiveImage] = useState<string | null>(null);
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const proofData = contentData.proofSection;
-
-  const filteredImages = proofData.images.filter((img) => {
-    if (selectedCategory === "All (11)") return true;
-    if (selectedCategory === "WhatsApp messages") return img.category === "WhatsApp message";
-    if (selectedCategory === "Google reviews") return img.category === "Google review";
-    return true;
-  });
-
-  const scroll = (direction: "left" | "right") => {
-    if (scrollRef.current) {
-      const scrollAmount = typeof window !== "undefined" && window.innerWidth < 768 ? 320 : 420;
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <main className="min-h-screen flex flex-col bg-[#FBFBFA]">
       {/* Header bar */}
@@ -200,7 +168,7 @@ export default function ThankYouPage() {
               </div>
 
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-4 leading-tight">
-                was where you are
+                I was where you are
               </h2>
 
               <div className="mb-6 p-3 rounded-2xl bg-white/5 border border-white/10 inline-flex items-center gap-3">
@@ -244,161 +212,7 @@ export default function ThankYouPage() {
         </div>
       </section>
 
-      {/* 3. Proof Section: Trusted by those who have tried everything */}
-      <section className="py-14 sm:py-20 bg-[#123835] text-white relative overflow-hidden">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="mx-auto max-w-3xl text-center mb-10 sm:mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/10 text-[#D6E5E0] text-xs font-bold tracking-wide uppercase mb-3 border border-white/15">
-              <CheckCircle2 className="w-4 h-4 text-[#E8704A]" />
-              Real Client Reviews
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
-              Trusted by those who have tried everything
-            </h2>
-            <p className="mt-3 text-base sm:text-lg text-[#D6E5E0] font-medium max-w-2xl mx-auto">
-              Real WhatsApp messages and Google reviews from clients. Results differ from person to person.
-            </p>
-
-            {/* Filter Tabs */}
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
-                    selectedCategory === cat
-                      ? "bg-[#E8704A] text-white shadow-md shadow-[#E8704A]/30 scale-105"
-                      : "bg-white/10 text-white/80 hover:bg-white/20"
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Carousel / Reviews Container */}
-          <div className="relative">
-            <button
-              onClick={() => scroll("left")}
-              aria-label="Previous review"
-              className="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white text-[#1F5F5B] items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all cursor-pointer"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <button
-              onClick={() => scroll("right")}
-              aria-label="Next review"
-              className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white text-[#1F5F5B] items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all cursor-pointer"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
-
-            <div
-              ref={scrollRef}
-              className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory pb-6 pt-2 px-2 -mx-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
-            >
-              {filteredImages.map((img) => (
-                <motion.div
-                  key={img.src}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true, amount: 0.05 }}
-                  transition={{ duration: 0.25 }}
-                  onClick={() => setActiveImage(img.src)}
-                  className="relative flex-none w-[280px] sm:w-[340px] md:w-[360px] snap-center rounded-2xl overflow-hidden bg-slate-900 border border-white/20 shadow-2xl group cursor-pointer flex flex-col transition-all hover:border-white/40 hover:scale-[1.01]"
-                >
-                  <div className="relative w-full h-[320px] sm:h-[380px] bg-slate-950 flex items-center justify-center p-2.5 overflow-hidden">
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      className="object-contain p-2 transition-transform duration-300 group-hover:scale-102"
-                      sizes="(max-width: 640px) 340px, 420px"
-                    />
-
-                    <div className="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md text-white text-[11px] font-medium px-2.5 py-1 rounded-full flex items-center gap-1 border border-white/10 shadow-xs pointer-events-none">
-                      <ZoomIn className="w-3 h-3 text-[#E8704A]" />
-                      <span className="hidden sm:inline">Click to zoom</span>
-                      <span className="sm:hidden">Tap to zoom</span>
-                    </div>
-                  </div>
-
-                  {/* Always Visible Review Label & Caption */}
-                  <div className="p-3.5 sm:p-4 bg-slate-900 border-t border-white/10 text-left flex flex-col justify-between flex-1 gap-2">
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="inline-flex items-center gap-1.5 bg-[#E8704A] text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-xs">
-                        {img.category === "WhatsApp message" ? (
-                          <MessageCircle className="w-3 h-3 shrink-0" />
-                        ) : (
-                          <CheckCircle2 className="w-3 h-3 shrink-0" />
-                        )}
-                        <span>{img.category}</span>
-                      </span>
-                      <span className="text-[11px] text-[#D6E5E0] font-medium">Verified Client</span>
-                    </div>
-
-                    <p className="text-xs sm:text-sm font-semibold text-white leading-snug">
-                      “{img.alt}”
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Lightbox Modal for Reviews */}
-      <AnimatePresence>
-        {activeImage && (() => {
-          const activeItem = proofData.images.find((img) => img.src === activeImage);
-          return (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setActiveImage(null)}
-              className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
-            >
-              <button
-                onClick={() => setActiveImage(null)}
-                aria-label="Close zoomed image"
-                className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 p-2.5 rounded-full transition-colors z-50 cursor-pointer"
-              >
-                <X className="w-6 h-6" />
-              </button>
-
-              <div
-                className="relative max-w-4xl max-h-[85vh] w-full h-full flex flex-col items-center justify-center"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <div className="relative w-full h-[70vh] max-h-[700px]">
-                  <Image
-                    src={activeImage}
-                    alt={activeItem?.alt || "Zoomed Review Screenshot"}
-                    fill
-                    className="object-contain drop-shadow-2xl"
-                    priority
-                  />
-                </div>
-                {activeItem && (
-                  <div className="mt-4 text-center max-w-xl">
-                    <span className="inline-block px-3 py-1 rounded-full bg-[#E8704A] text-white text-xs font-bold uppercase mb-2">
-                      {activeItem.category}
-                    </span>
-                    <p className="text-sm sm:text-base text-white font-medium">
-                      “{activeItem.alt}”
-                    </p>
-                  </div>
-                )}
-              </div>
-            </motion.div>
-          );
-        })()}
-      </AnimatePresence>
-
-      {/* 4. Bottom Back to Home CTA */}
+      {/* 3. Bottom Back to Home CTA */}
       <section className="py-12 bg-white border-t border-slate-200 text-center">
         <div className="mx-auto max-w-md px-4">
           <Link
