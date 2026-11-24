@@ -124,6 +124,7 @@ export default function ConsultationModal({
           {/* Embedded Tally Form Container */}
           <div className="flex-1 w-full overflow-y-auto bg-white p-2 sm:p-4 min-h-[550px] sm:min-h-[650px]">
             <iframe
+              src="https://tally.so/embed/KppG7M?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
               data-tally-src="https://tally.so/embed/KppG7M?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
               loading="lazy"
               width="100%"

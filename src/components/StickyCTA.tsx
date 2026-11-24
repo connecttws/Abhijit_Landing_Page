@@ -47,6 +47,12 @@ export default function StickyCTA({
           <div className="mx-auto max-w-2xl flex flex-col items-center justify-center gap-1.5">
             <button
               onClick={onOpenModal}
+              data-tally-open="KppG7M"
+              data-tally-layout="modal"
+              data-tally-width="700"
+              data-tally-auto-close="1500"
+              data-tally-hide-title="1"
+              data-tally-transparent-background="1"
               className="group relative inline-flex items-center justify-center gap-2.5 w-full rounded-2xl bg-gradient-to-r from-[#E8704A] to-[#F17E5B] px-5 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base md:text-lg font-black text-white shadow-xl shadow-[#E8704A]/30 transition-all duration-300 hover:from-[#DF633D] hover:to-[#E8704A] hover:shadow-2xl hover:shadow-[#E8704A]/40 active:translate-y-0.5 cursor-pointer border-b-4 border-[#014D82]"
             >
               <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-white/90 shrink-0" />

@@ -82,6 +82,12 @@ export default function HeroSection({ data, onOpenModal }: HeroSectionProps) {
         <div className="mt-8 sm:mt-10 flex flex-col items-center justify-center gap-3">
           <button
             onClick={onOpenModal}
+            data-tally-open="KppG7M"
+            data-tally-layout="modal"
+            data-tally-width="700"
+            data-tally-auto-close="1500"
+            data-tally-hide-title="1"
+            data-tally-transparent-background="1"
             className="group relative inline-flex items-center justify-center gap-3 w-full sm:w-auto rounded-2xl bg-gradient-to-r from-[#E8704A] to-[#F17E5B] px-8 sm:px-12 py-4 sm:py-5 text-base sm:text-xl font-black text-white shadow-xl shadow-[#E8704A]/30 transition-all duration-300 hover:from-[#DF633D] hover:to-[#E8704A] hover:shadow-2xl hover:shadow-[#E8704A]/40 hover:-translate-y-1 active:translate-y-0 cursor-pointer border-b-4 border-[#014D82]"
           >
             <span>{data.ctaText}</span>

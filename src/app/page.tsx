@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
@@ -23,12 +23,50 @@ import contentData from "@/data/content.json";
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleOpenModal = () => setIsModalOpen(true);
+  // Listen for Tally form submission globally across the page
+  useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
+      try {
+        const payload = typeof event.data === "string" ? JSON.parse(event.data) : event.data;
+        if (payload?.event === "Tally.FormSubmitted") {
+          window.location.href = "/thank-you";
+        }
+      } catch {
+        if (typeof event.data === "string" && event.data.includes("Tally.FormSubmitted")) {
+          window.location.href = "/thank-you";
+        }
+      }
+    };
+
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, []);
+
+  const handleOpenModal = () => {
+    // If Tally script popup is available, trigger Tally modal directly
+    const tally = (window as unknown as { Tally?: { openPopup: (id: string, opt?: object) => void } }).Tally;
+    if (typeof tally !== "undefined" && typeof tally.openPopup === "function") {
+      tally.openPopup("KppG7M", {
+        layout: "modal",
+        width: 700,
+        autoClose: 1500,
+        hideTitle: true,
+        transparentBackground: true,
+        onSubmitted: () => {
+          window.location.href = "/thank-you";
+        },
+      });
+    } else {
+      // Fallback: open our branded modal with the embedded Tally form
+      setIsModalOpen(true);
+    }
+  };
+
   const handleCloseModal = () => setIsModalOpen(false);
 
   return (
     <main className="min-h-screen flex flex-col bg-[#FBFBFA] overflow-x-hidden selection:bg-[#E8704A]/20 selection:text-[#E8704A] pb-20 sm:pb-0">
-      <Script src="https://tally.so/widgets/embed.js" strategy="lazyOnload" />
+      <Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" />
 
       {/* Navigation (Hidden on mobile, visible on desktop) */}
       <Navbar onOpenModal={handleOpenModal} />
