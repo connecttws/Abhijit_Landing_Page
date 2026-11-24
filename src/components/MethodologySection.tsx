@@ -24,6 +24,13 @@ interface MethodologySectionProps {
 
 const stepIcons = [Search, Apple, Activity, ShieldCheck];
 
+const stepAxisBadges: Record<number, string> = {
+  1: "All 6 Axes Diagnosed",
+  2: "Axis 1 (Gut) & Axis 5 (Dopamine)",
+  3: "Axis 2 (Breath), Axis 3 (Spine) & Axis 6 (SOS)",
+  4: "Axis 4 (Sleep) & Habit Lock-In",
+};
+
 export default function MethodologySection({
   data,
   onOpenModal,
@@ -58,24 +65,24 @@ export default function MethodologySection({
               <div className="md:col-span-7">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#D6E5E0] text-xs font-bold uppercase mb-3">
                   <Sparkles className="w-3.5 h-3.5 text-[#E8704A]" />
-                  Proprietary framework
+                  Proprietary 4-Phase, 6-Axis Protocol
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-black mb-3">
-                  The 6 biological axes of anxiety
+                  How our 4 phases reset your 6 biological axes
                 </h3>
                 <p className="text-sm sm:text-base text-[#D6E5E0] leading-relaxed mb-6">
-                  Anxiety is not only in your head. It shows up in your gut, your breath, your spine, your sleep and your daily habits. Our 6-Axis methodology systematically resets each layer.
+                  Anxiety is not just in your head — it is physically held across 6 distinct biological axes. Our 90-day program uses the 4 progressive phases shown in the diagram to systematically unlock each axis, shifting your nervous system into permanent calm.
                 </p>
                 <div className="flex flex-wrap gap-2 text-xs font-semibold">
-                  <span className="bg-white/10 px-3 py-1 rounded-full border border-white/15">1. Gut-Brain Chemistry</span>
-                  <span className="bg-white/10 px-3 py-1 rounded-full border border-white/15">2. Vagal Breathing</span>
-                  <span className="bg-white/10 px-3 py-1 rounded-full border border-white/15">3. Spinal Release</span>
-                  <span className="bg-white/10 px-3 py-1 rounded-full border border-white/15">4. Sleep Architecture</span>
-                  <span className="bg-white/10 px-3 py-1 rounded-full border border-white/15">5. Dopamine Balance</span>
-                  <span className="bg-white/10 px-3 py-1 rounded-full border border-white/15">6. Somatic SOS</span>
+                  <span className="bg-white/10 px-3 py-1 rounded-full border border-white/15">Axis 1: Gut-Brain Chemistry</span>
+                  <span className="bg-white/10 px-3 py-1 rounded-full border border-white/15">Axis 2: Vagal Breathing</span>
+                  <span className="bg-white/10 px-3 py-1 rounded-full border border-white/15">Axis 3: Spinal Tension Release</span>
+                  <span className="bg-white/10 px-3 py-1 rounded-full border border-white/15">Axis 4: Sleep Architecture</span>
+                  <span className="bg-white/10 px-3 py-1 rounded-full border border-white/15">Axis 5: Dopamine Balance</span>
+                  <span className="bg-white/10 px-3 py-1 rounded-full border border-white/15">Axis 6: Somatic SOS Protocol</span>
                 </div>
               </div>
-              <div className="md:col-span-5 flex justify-center">
+              <div className="md:col-span-5 flex flex-col items-center justify-center">
                 <div
                   onClick={() => setZoomInfographic(true)}
                   className="relative group cursor-pointer w-full max-w-[280px] aspect-square rounded-2xl overflow-hidden bg-white/95 p-3 shadow-xl border-2 border-white/40 transition-transform hover:scale-105"
@@ -92,9 +99,25 @@ export default function MethodologySection({
                     <span>View Full Diagram</span>
                   </div>
                 </div>
+                <span className="text-[11px] text-[#D6E5E0] font-semibold mt-2">
+                  The 4-Step 90-Day Reset Cycle (Tap to zoom)
+                </span>
               </div>
             </div>
           </div>
+        </div>
+
+        {/* The 4 Distinct Steps Header */}
+        <div className="text-center mb-8 sm:mb-12">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#1F5F5B] bg-[#1F5F5B]/10 px-4 py-1.5 rounded-full inline-block">
+            Step-by-Step Program Walkthrough
+          </span>
+          <h3 className="text-2xl sm:text-3xl font-black text-[#0F172A] mt-2">
+            The 4 Program Phases in Detail
+          </h3>
+          <p className="text-xs sm:text-sm text-slate-500 mt-1 max-w-xl mx-auto">
+            Each phase progressively unlocks your 6 biological axes for lasting autonomic calm.
+          </p>
         </div>
 
         {/* The 4 Distinct Steps */}
@@ -141,6 +164,15 @@ export default function MethodologySection({
                       }`}
                     >
                       {step.subtitle}
+                    </span>
+                    <span
+                      className={`inline-block mt-1.5 text-[10px] sm:text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${
+                        isEven
+                          ? "bg-white/10 text-white/95 border-white/20"
+                          : "bg-[#1F5F5B]/10 text-[#1F5F5B] border-[#1F5F5B]/20"
+                      }`}
+                    >
+                      {stepAxisBadges[step.stepNumber]}
                     </span>
                   </div>
                 </div>

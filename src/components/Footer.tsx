@@ -55,11 +55,6 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/#testimonials" className="hover:text-white transition-colors">
-                  Client testimonials
-                </a>
-              </li>
-              <li>
                 <a href="/#reviews" className="hover:text-white transition-colors">
                   Client reviews
                 </a>

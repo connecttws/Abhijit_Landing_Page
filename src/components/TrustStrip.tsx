@@ -44,19 +44,19 @@ export default function TrustStrip() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.05 }}
                 transition={{ duration: 0.25 }}
-                className="flex items-center gap-2.5 sm:gap-4 p-1.5 sm:p-3 rounded-2xl hover:bg-slate-50/80 transition-colors"
+                className="flex items-start sm:items-center gap-2.5 sm:gap-4 p-2 sm:p-3 rounded-2xl hover:bg-slate-50/80 transition-colors"
               >
-                <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-2xl bg-[#1F5F5B]/10 text-[#1F5F5B] flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-2xl bg-[#1F5F5B]/10 text-[#1F5F5B] flex items-center justify-center shrink-0 mt-0.5 sm:mt-0">
                   <Icon className="w-5 h-5 sm:w-7 sm:h-7" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <div className="text-base sm:text-xl lg:text-2xl font-black text-[#0F172A] leading-tight whitespace-nowrap truncate">
+                  <div className="text-base sm:text-xl lg:text-2xl font-black text-[#0F172A] leading-tight">
                     {stat.value}
                   </div>
-                  <div className="text-[11px] sm:text-sm font-bold text-[#1F5F5B] leading-tight truncate">
+                  <div className="text-xs sm:text-sm font-bold text-[#1F5F5B] leading-tight mt-0.5">
                     {stat.label}
                   </div>
-                  <div className="text-[10px] sm:text-xs text-slate-500 font-medium leading-tight line-clamp-1 sm:line-clamp-none">
+                  <div className="text-[11px] sm:text-xs text-slate-600 font-medium leading-snug mt-1">
                     {stat.subtext}
                   </div>
                 </div>
