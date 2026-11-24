@@ -77,67 +77,51 @@ export default function ConsultationModal({
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
-        {/* Backdrop */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={onClose}
-          className="fixed inset-0 bg-slate-950/75 backdrop-blur-sm"
-        />
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.25 }}
+        className="fixed inset-0 z-50 w-full h-full bg-white flex flex-col overflow-hidden"
+      >
+        {/* Full-Screen Top Header Bar */}
+        <div className="bg-[#1F5F5B] text-white px-4 sm:px-8 py-3 sm:py-3.5 flex items-center justify-between shadow-md shrink-0 z-30 border-b border-white/10">
+          <div className="flex items-center gap-2.5">
+            <span className="font-black text-base sm:text-lg text-white tracking-tight">
+              Wellness With Abhijit
+            </span>
+            <span className="hidden sm:inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/20 text-[#D6E5E0] text-xs font-bold uppercase tracking-wider">
+              <Sparkles className="w-3 h-3 text-[#E8704A]" />
+              Free Consultation
+            </span>
+          </div>
 
-        {/* Modal Window */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          transition={{ duration: 0.25 }}
-          className="relative w-full max-w-2xl rounded-3xl bg-white shadow-2xl border-2 border-[#1F5F5B]/20 overflow-hidden z-10 my-4 max-h-[92vh] flex flex-col"
-        >
-          {/* Close button */}
           <button
             onClick={onClose}
-            aria-label="Close modal"
-            className="absolute top-3.5 right-3.5 w-9 h-9 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-colors cursor-pointer z-30"
+            aria-label="Close"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold text-xs sm:text-sm transition-colors cursor-pointer"
           >
-            <X className="w-5 h-5" />
+            <span>Close</span>
+            <X className="w-4 h-4" />
           </button>
+        </div>
 
-          {/* Modal Header */}
-          <div className="bg-gradient-to-r from-[#1F5F5B] to-[#27726D] text-white p-5 sm:p-6 text-center relative overflow-hidden shrink-0">
-            <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none" />
-
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 text-[#D6E5E0] text-xs font-black uppercase tracking-wider mb-2">
-              <Sparkles className="w-3.5 h-3.5 text-[#E8704A]" />
-              <span>{data.stepBadge || "Free 1-on-1 Consultation"}</span>
-            </div>
-
-            <h3 className="text-xl sm:text-2xl font-black tracking-tight text-white">
-              {data.title || "Book Your Free Consultation"}
-            </h3>
-            <p className="mt-1 text-xs sm:text-sm text-[#D6E5E0] font-medium max-w-md mx-auto">
-              {data.subtitle || "Complete your details below to schedule your private call with Abhijit."}
-            </p>
-          </div>
-
-          {/* Embedded Tally Form Container */}
-          <div className="flex-1 w-full overflow-y-auto bg-white p-2 sm:p-4 min-h-[550px] sm:min-h-[650px]">
-            <iframe
-              src="https://tally.so/embed/KppG7M?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-              data-tally-src="https://tally.so/embed/KppG7M?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-              loading="lazy"
-              width="100%"
-              height="650"
-              frameBorder="0"
-              marginHeight={0}
-              marginWidth={0}
-              title="Book Consultation"
-              className="w-full min-h-[550px] sm:min-h-[650px] border-0"
-            />
-          </div>
-        </motion.div>
-      </div>
+        {/* 100% Full-Screen Iframe Container */}
+        <div className="flex-1 w-full h-full bg-white overflow-hidden relative">
+          <iframe
+            src="https://tally.so/embed/KppG7M?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            data-tally-src="https://tally.so/embed/KppG7M?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            loading="lazy"
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            marginHeight={0}
+            marginWidth={0}
+            title="Book Consultation"
+            className="w-full h-full border-0"
+          />
+        </div>
+      </motion.div>
     </AnimatePresence>
   );
 }

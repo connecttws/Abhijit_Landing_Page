@@ -43,12 +43,11 @@ export default function Home() {
   }, []);
 
   const handleOpenModal = () => {
-    // If Tally script popup is available, trigger Tally modal directly
+    // If Tally script popup is available, trigger Tally full-screen popup directly
     const tally = (window as unknown as { Tally?: { openPopup: (id: string, opt?: object) => void } }).Tally;
     if (typeof tally !== "undefined" && typeof tally.openPopup === "function") {
       tally.openPopup("KppG7M", {
-        layout: "modal",
-        width: 700,
+        layout: "default",
         autoClose: 1500,
         hideTitle: true,
         transparentBackground: true,
@@ -57,7 +56,7 @@ export default function Home() {
         },
       });
     } else {
-      // Fallback: open our branded modal with the embedded Tally form
+      // Fallback: open our full-screen modal with the embedded Tally form
       setIsModalOpen(true);
     }
   };

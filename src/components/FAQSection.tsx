@@ -96,8 +96,7 @@ export default function FAQSection({ faqs, onOpenModal }: FAQSectionProps) {
           <button
             onClick={onOpenModal}
             data-tally-open="KppG7M"
-            data-tally-layout="modal"
-            data-tally-width="700"
+            data-tally-layout="default"
             data-tally-auto-close="1500"
             data-tally-hide-title="1"
             data-tally-transparent-background="1"
