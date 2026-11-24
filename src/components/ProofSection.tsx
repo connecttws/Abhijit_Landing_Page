@@ -177,7 +177,7 @@ export default function ProofSection({ data, onOpenModal }: ProofSectionProps) {
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </button>
           <p className="mt-3 text-xs sm:text-sm text-[#D6E5E0]">
-            Join 5,000+ people who stopped masking symptoms and worked on the root cause.
+            Join 300+ people who stopped masking symptoms with 5,000+ hours of proven teaching experience.
           </p>
         </div>
       </div>

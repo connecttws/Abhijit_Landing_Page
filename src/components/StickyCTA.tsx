@@ -17,11 +17,20 @@ export default function StickyCTA({
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show when scrolled past hero section (approx 350px)
-      setIsVisible(window.scrollY > 350);
+      const footer = document.querySelector("footer");
+      const footerTop = footer ? footer.getBoundingClientRect().top : Infinity;
+      const windowHeight = window.innerHeight;
+
+      // Show when scrolled past hero section (>350px)
+      // Automatically hide when the user reaches the footer so it never covers footer links/policies
+      const isPastHero = window.scrollY > 350;
+      const isOverFooter = footerTop <= windowHeight;
+
+      setIsVisible(isPastHero && !isOverFooter);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 

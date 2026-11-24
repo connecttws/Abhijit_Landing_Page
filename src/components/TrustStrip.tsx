@@ -6,9 +6,9 @@ import { Users, Clock, ShieldCheck, Award, HeartPulse } from "lucide-react";
 const stats = [
   {
     icon: Users,
-    value: "5,000+",
-    label: "People taught",
-    subtext: "Over 7 years of coaching",
+    value: "5,000+ Hrs",
+    label: "Teaching experience",
+    subtext: "300+ people coached over 7 years",
   },
   {
     icon: Clock,

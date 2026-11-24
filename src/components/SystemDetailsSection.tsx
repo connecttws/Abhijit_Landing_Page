@@ -69,10 +69,10 @@ const systemDeliverables = [
     tag: "Sustainable Calm",
   },
   {
-    title: "3-Week Measurable Guarantee",
-    description: "If you follow your customized daily protocols and don't see noticeable calm in 3 weeks, we continue coaching you free.",
+    title: "Continuous Coaching Guarantee",
+    description: "If you follow your customized daily protocols and do not see measurable progress in your anxiety score, we keep working with you for free.",
     icon: Trophy,
-    tag: "100% Risk-Free",
+    tag: "Risk-Free",
   },
 ];
 

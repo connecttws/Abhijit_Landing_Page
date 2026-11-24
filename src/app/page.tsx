@@ -8,7 +8,8 @@ import AboutSection from "@/components/AboutSection";
 import MethodologySection from "@/components/MethodologySection";
 import SystemDetailsSection from "@/components/SystemDetailsSection";
 import TargetAudienceSection from "@/components/TargetAudienceSection";
-import TestimonialSection from "@/components/TestimonialSection";
+// TestimonialSection hidden as requested by client
+// import TestimonialSection from "@/components/TestimonialSection";
 import ProofSection from "@/components/ProofSection";
 import CoachProfileSection from "@/components/CoachProfileSection";
 import NotForYouSection from "@/components/NotForYouSection";
@@ -56,8 +57,8 @@ export default function Home() {
         onOpenModal={handleOpenModal}
       />
 
-      {/* Testimonials ("What Our Clients Say") */}
-      <TestimonialSection />
+      {/* Testimonials ("What Our Clients Say") - Hidden as requested */}
+      {/* <TestimonialSection /> */}
 
       {/* Client Reviews & Transformation Gallery */}
       <ProofSection

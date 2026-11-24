@@ -33,8 +33,8 @@
     "title": "Trusted by those who have tried everything",
     "subtitle": "Real WhatsApp messages and Google reviews from clients. Results differ from person to person.",
     "stats": [
-      { "value": "5,000+", "label": "Lives Reclaimed" },
-      { "value": "3 Weeks", "label": "Average Initial Relief" },
+      { "value": "5,000+ Hrs", "label": "Teaching Experience" },
+      { "value": "300+", "label": "Clients Coached" },
       { "value": "0", "label": "Pills or Medicines" },
       { "value": "98%", "label": "Client Satisfaction Rate" }
     ],
@@ -259,7 +259,7 @@
   "thankYou": {
     "title": "You’re One Step Away From Complete Calm!",
     "subtitle": "Your consultation request has been submitted. Please complete the quick 60-second intake form below so Coach Abhijit can prepare your personalized Root Cause Scan.",
-    "tallyEmbedUrl": "https://tally.so/embed/KppG7M?hideTitle=1&transparentBackground=1&dynamicHeight=1",
+    "tallyEmbedUrl": "https://tally.so/embed/KppG7M?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1",
     "nextSteps": [
       "Fill out the confidential intake questions above.",
       "Our team will reach out via WhatsApp to confirm your preferred consultation time slot.",

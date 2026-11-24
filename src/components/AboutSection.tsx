@@ -90,7 +90,7 @@ export default function AboutSection() {
               <ShieldCheck className="w-6 h-6 text-[#1F5F5B] shrink-0" />
               <div className="text-xs sm:text-sm">
                 <span className="font-bold text-[#0F172A] block">100% Drug-Free & Science-Backed</span>
-                <span className="text-slate-500">Trained at Kaivalyadhama Yoga Institute • 5,000+ taught</span>
+                <span className="text-slate-500">Trained at Kaivalyadhama Yoga Institute • 5,000+ hours teaching • 300+ people coached</span>
               </div>
             </div>
           </motion.div>

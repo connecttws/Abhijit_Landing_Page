@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowRight, ShieldCheck, HeartPulse, Award, Sparkles } from "lucide-react";
+import { ArrowRight, ShieldCheck, HeartPulse, Sparkles } from "lucide-react";
 
 interface CoachProfileSectionProps {
   onOpenModal: () => void;
@@ -111,8 +111,8 @@ export default function CoachProfileSection({ onOpenModal }: CoachProfileSection
             {/* Credential Points */}
             <div className="mt-8 pt-6 border-t border-white/15 grid grid-cols-1 sm:grid-cols-3 gap-3 text-left">
               <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-                <div className="text-base font-black text-white">5,000+ people</div>
-                <div className="text-xs text-[#D6E5E0] mt-0.5">Taught over 7 years</div>
+                <div className="text-base font-black text-white">5,000+ Hours</div>
+                <div className="text-xs text-[#D6E5E0] mt-0.5">Teaching Experience · 300+ People</div>
               </div>
               <div className="p-4 rounded-xl bg-white/5 border border-white/10">
                 <div className="text-base font-black text-white">Kaivalyadhama</div>
@@ -131,9 +131,6 @@ export default function CoachProfileSection({ onOpenModal }: CoachProfileSection
               </span>
               <span className="bg-white/10 px-4 py-2 rounded-xl border border-white/15 flex items-center gap-2">
                 <HeartPulse className="w-4 h-4 text-[#E8704A]" /> Daily Somatic Desensitization
-              </span>
-              <span className="bg-white/10 px-4 py-2 rounded-xl border border-white/15 flex items-center gap-2">
-                <Award className="w-4 h-4 text-[#E8704A]" /> 3-Week Guaranteed Metric
               </span>
             </div>
 
