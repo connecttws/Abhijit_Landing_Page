@@ -31,7 +31,7 @@ const focusAreas = [
   },
   {
     name: "Postural Realignment & Thoracic Spine",
-    desc: "Releasing chronic shoulder stone, chest tightness, and desk hunching.",
+    desc: "Easing tight shoulders, a tense upper back, and desk hunching.",
     icon: Compass,
   },
   {
