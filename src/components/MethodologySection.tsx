@@ -238,11 +238,6 @@ export default function MethodologySection({
         <div className="mt-14 sm:mt-20 text-center">
           <button
             onClick={onOpenModal}
-            data-tally-open="KppG7M"
-            data-tally-layout="default"
-            data-tally-auto-close="1500"
-            data-tally-hide-title="1"
-            data-tally-transparent-background="1"
             className="group relative inline-flex items-center justify-center gap-3 w-full sm:w-auto rounded-2xl bg-[#E8704A] hover:bg-[#D85E38] text-white px-8 sm:px-12 py-4 sm:py-5 text-base sm:text-xl font-black shadow-xl shadow-[#E8704A]/30 transition-all hover:scale-105 active:scale-95 cursor-pointer border-b-4 border-[#014D82]"
           >
             <span>{data.ctaText}</span>

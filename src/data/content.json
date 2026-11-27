@@ -252,7 +252,7 @@
       { "name": "email", "label": "Email Address", "placeholder": "Enter your email address", "required": true, "type": "email" },
       { "name": "phone", "label": "WhatsApp / Phone Number", "placeholder": "Enter 10-digit WhatsApp number", "required": true, "type": "tel" }
     ],
-    "submitText": "Continue to book my free consultation",
+    "submitText": "Continue",
     "subtext": "If slots are full, kindly try later",
     "privacy": "🔒 Your information is 100% private, confidential and never shared."
   },

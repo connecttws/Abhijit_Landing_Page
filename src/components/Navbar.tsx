@@ -94,11 +94,6 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
         <div className="flex items-center gap-3">
           <button
             onClick={onOpenModal}
-            data-tally-open="KppG7M"
-            data-tally-layout="default"
-            data-tally-auto-close="1500"
-            data-tally-hide-title="1"
-            data-tally-transparent-background="1"
             className="relative inline-flex items-center justify-center gap-2 rounded-2xl bg-[#1F5F5B] hover:bg-[#174946] text-white px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold shadow-md shadow-[#1F5F5B]/20 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
           >
             <Calendar className="w-3.5 h-3.5 text-[#E8704A]" />
