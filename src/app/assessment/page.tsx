@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Script from "next/script";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -11,8 +11,9 @@ const BASE_TALLY_URL =
 
 export default function AssessmentPage() {
   const router = useRouter();
-  const [tallyUrl, setTallyUrl] = useState(BASE_TALLY_URL);
+  const [tallyUrl, setTallyUrl] = useState<string | null>(null);
   const [userName, setUserName] = useState("");
+  const redirectedRef = useRef(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -30,24 +31,28 @@ export default function AssessmentPage() {
       if (phone) params.set("phone", phone);
 
       const query = params.toString();
-      if (query) {
-        setTallyUrl(`${BASE_TALLY_URL}&${query}`);
-      }
+      setTallyUrl(query ? `${BASE_TALLY_URL}&${query}` : BASE_TALLY_URL);
     }
+
+    const goToCalendly = () => {
+      if (redirectedRef.current) return;
+      redirectedRef.current = true;
+      router.push("/book-slot");
+    };
 
     const handleMessage = (event: MessageEvent) => {
       try {
         const payload =
           typeof event.data === "string" ? JSON.parse(event.data) : event.data;
         if (payload?.event === "Tally.FormSubmitted") {
-          router.push("/book-slot");
+          goToCalendly();
         }
       } catch {
         if (
           typeof event.data === "string" &&
           event.data.includes("Tally.FormSubmitted")
         ) {
-          router.push("/book-slot");
+          goToCalendly();
         }
       }
     };
@@ -57,7 +62,7 @@ export default function AssessmentPage() {
   }, [router]);
 
   return (
-    <main className="h-screen w-screen flex flex-col bg-white overflow-hidden">
+    <main className="min-h-screen w-full flex flex-col bg-[#FBFBFA]">
       <Script
         src="https://tally.so/widgets/embed.js"
         strategy="afterInteractive"
@@ -72,7 +77,7 @@ export default function AssessmentPage() {
       />
 
       {/* Minimal Top Progress Bar */}
-      <header className="bg-[#1F5F5B] text-white px-4 sm:px-8 py-3 flex items-center justify-between shadow-sm shrink-0 z-20">
+      <header className="bg-[#1F5F5B] text-white px-4 sm:px-8 py-3.5 flex items-center justify-between shadow-sm shrink-0 sticky top-0 z-20">
         <div className="flex items-center gap-2.5">
           <div className="w-7 h-7 rounded-lg overflow-hidden bg-white/10 shrink-0">
             <Image
@@ -96,20 +101,24 @@ export default function AssessmentPage() {
         </div>
       </header>
 
-      {/* Full-Page Tally Embed */}
-      <div className="flex-1 w-full h-full bg-white overflow-y-auto">
-        <iframe
-          src={tallyUrl}
-          data-tally-src={tallyUrl}
-          loading="eager"
-          width="100%"
-          height="100%"
-          frameBorder="0"
-          marginHeight={0}
-          marginWidth={0}
-          title="Pre-Consultation Assessment"
-          className="w-full h-full min-h-[calc(100vh-56px)] border-0"
-        />
+      {/* Full-Page Tally Container with Comfortable Left & Right Margins */}
+      <div className="flex-1 w-full px-4 sm:px-8 md:px-14 lg:px-20 py-6 sm:py-10 flex flex-col">
+        <div className="mx-auto w-full max-w-4xl flex-1 bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-lg shadow-slate-900/5 px-4 sm:px-8 md:px-12 py-6 sm:py-8">
+          {tallyUrl && (
+            <iframe
+              src={tallyUrl}
+              data-tally-src={tallyUrl}
+              loading="eager"
+              width="100%"
+              height="800"
+              frameBorder="0"
+              marginHeight={0}
+              marginWidth={0}
+              title="Pre-Consultation Assessment"
+              className="w-full min-h-[75vh] border-0"
+            />
+          )}
+        </div>
       </div>
     </main>
   );
